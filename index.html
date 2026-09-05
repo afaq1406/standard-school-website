@@ -1,0 +1,5723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>THE STANDARD SCHOOL AND COLLEGE</title>
+
+<meta name="description"
+content="THE STANDARD SCHOOL AND COLLEGE - Professional School Website">
+
+<meta name="theme-color" content="#0b3d91">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0b3d91;
+    --primary2:#1557c0;
+    --secondary:#f5b700;
+    --accent:#16a085;
+    --danger:#dc3545;
+    --success:#198754;
+
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#172033;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+
+    --shadow:0 15px 45px rgba(15,23,42,.10);
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Poppins,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+body.dark{
+    --bg:#0f172a;
+    --card:#172033;
+    --text:#f8fafc;
+    --muted:#aab4c3;
+    --border:#2b3648;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* TOPBAR */
+
+.topbar{
+    background:#071d45;
+    color:#fff;
+    padding:9px 0;
+    font-size:13px;
+}
+
+.topbar-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.topbar-info{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.top-actions{
+    display:flex;
+    gap:8px;
+}
+
+.top-btn{
+    border:1px solid rgba(255,255,255,.25);
+    background:transparent;
+    color:#fff;
+    padding:6px 10px;
+    border-radius:8px;
+}
+
+/* HEADER */
+
+header{
+    background:var(--card);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 25px rgba(0,0,0,.06);
+}
+
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-weight:900;
+    font-size:19px;
+    overflow:hidden;
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.brand-text h1{
+    font-size:18px;
+    font-weight:800;
+    color:var(--primary);
+}
+
+.brand-text span{
+    font-size:11px;
+    color:var(--muted);
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.nav-links a{
+    padding:10px 11px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    background:#edf4ff;
+    color:var(--primary);
+}
+
+.nav-apply{
+    background:var(--secondary)!important;
+    color:#111!important;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:var(--primary);
+    color:#fff;
+    width:43px;
+    height:43px;
+    border-radius:10px;
+    font-size:20px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(120deg,rgba(4,24,62,.96),rgba(11,61,145,.82)),
+        radial-gradient(circle at 80% 30%,#2671df,transparent 35%);
+    color:#fff;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+    right:-150px;
+    top:-120px;
+}
+
+.hero-content{
+    max-width:760px;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-flex;
+    padding:8px 14px;
+    border-radius:50px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    margin-bottom:20px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.hero h2{
+    font-size:clamp(38px,6vw,70px);
+    line-height:1.05;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.hero h2 span{
+    color:var(--secondary);
+}
+
+.hero p{
+    max-width:650px;
+    color:#e5edff;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:0;
+    padding:13px 20px;
+    border-radius:11px;
+    font-weight:700;
+    transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:var(--secondary);
+    color:#111;
+}
+
+.btn-light{
+    background:#fff;
+    color:var(--primary);
+}
+
+.btn-dark{
+    background:#172033;
+    color:#fff;
+}
+
+.btn-success{
+    background:var(--success);
+    color:#fff;
+}
+
+.btn-danger{
+    background:var(--danger);
+    color:#fff;
+}
+
+.btn-outline{
+    border:1px solid var(--border);
+    background:transparent;
+    color:var(--text);
+}
+
+/* SECTION */
+
+section{
+    padding:85px 0;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-head small{
+    color:var(--primary2);
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.section-head h2{
+    font-size:35px;
+    margin:7px 0;
+}
+
+.section-head p{
+    color:var(--muted);
+    max-width:650px;
+    margin:auto;
+}
+
+/* QUICK CARDS */
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:-50px;
+    position:relative;
+    z-index:5;
+}
+
+.quick-card{
+    background:var(--card);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.quick-icon{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:#eaf2ff;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.quick-card h3{
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.quick-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-box{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:35px;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+}
+
+.about-box h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:var(--muted);
+    margin-bottom:15px;
+}
+
+.info-list{
+    display:grid;
+    gap:12px;
+    margin-top:20px;
+}
+
+.info-item{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.info-item strong{
+    display:block;
+}
+
+.info-item span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* STATS */
+
+.stats{
+    background:#071d45;
+    color:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    padding:20px;
+}
+
+.stat-number{
+    font-size:42px;
+    font-weight:800;
+    color:var(--secondary);
+}
+
+.stat-label{
+    color:#cbd7ed;
+}
+
+/* CARDS */
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.grid-4{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+
+.card-body{
+    padding:23px;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.class-card{
+    padding:28px;
+    text-align:center;
+    transition:.25s;
+}
+
+.class-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+}
+
+.class-icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    margin:auto auto 16px;
+    background:#edf4ff;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+}
+
+/* FACULTY */
+
+.person-card{
+    text-align:center;
+    padding:25px;
+}
+
+.person-avatar{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    margin:0 auto 15px;
+    background:linear-gradient(135deg,#e9f1ff,#dce8ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--primary);
+    font-size:38px;
+    overflow:hidden;
+}
+
+.person-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.role{
+    color:var(--primary2);
+    font-size:13px;
+    font-weight:700;
+}
+
+/* EMPTY */
+
+.empty-state{
+    grid-column:1/-1;
+    text-align:center;
+    padding:55px 20px;
+    border:2px dashed var(--border);
+    border-radius:18px;
+    color:var(--muted);
+}
+
+.empty-state .empty-icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+/* FACILITIES */
+
+.facility{
+    padding:28px;
+}
+
+.facility-icon{
+    font-size:34px;
+    margin-bottom:14px;
+}
+
+/* ADMISSION */
+
+.admission-section{
+    background:linear-gradient(135deg,#eef5ff,#f8fbff);
+}
+
+body.dark .admission-section{
+    background:#101b31;
+}
+
+.form-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:32px;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    font-size:13px;
+    font-weight:700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    background:var(--bg);
+    color:var(--text);
+    border-radius:10px;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:var(--primary2);
+}
+
+/* RESULT */
+
+.result-box{
+    max-width:750px;
+    margin:auto;
+}
+
+.result-search{
+    display:flex;
+    gap:10px;
+}
+
+.result-search input{
+    flex:1;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:var(--card);
+    color:var(--text);
+}
+
+.result-display{
+    margin-top:25px;
+}
+
+/* GALLERY */
+
+.gallery-card{
+    min-height:220px;
+    position:relative;
+    overflow:hidden;
+}
+
+.gallery-image{
+    width:100%;
+    height:220px;
+    background:#eaf0f8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#7b8798;
+    font-size:40px;
+    overflow:hidden;
+}
+
+.gallery-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.gallery-caption{
+    padding:15px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    padding:28px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+}
+
+.contact-row{
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.contact-row:last-child{
+    border-bottom:0;
+}
+
+.contact-icon{
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    background:#edf4ff;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061631;
+    color:#fff;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    margin-bottom:14px;
+}
+
+footer p,
+footer li{
+    color:#aebbd0;
+    font-size:14px;
+}
+
+footer ul{
+    list-style:none;
+    display:grid;
+    gap:8px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:35px;
+    padding-top:20px;
+    text-align:center;
+    color:#9daac0;
+    font-size:13px;
+}
+
+/* MODALS */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:5000;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:min(900px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:var(--card);
+    color:var(--text);
+    border-radius:20px;
+    box-shadow:0 30px 100px rgba(0,0,0,.3);
+}
+
+.modal-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 25px;
+    border-bottom:1px solid var(--border);
+}
+
+.close{
+    width:38px;
+    height:38px;
+    border:0;
+    background:var(--bg);
+    color:var(--text);
+    border-radius:9px;
+    font-size:20px;
+}
+
+.modal-body{
+    padding:25px;
+}
+
+/* LOGIN */
+
+.login-box{
+    max-width:430px;
+}
+
+.login-logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.login-logo .logo{
+    margin:auto;
+}
+
+/* ADMIN */
+
+.admin-modal{
+    width:min(1200px,100%);
+}
+
+.admin-layout{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    min-height:650px;
+}
+
+.admin-sidebar{
+    background:#071d45;
+    color:#fff;
+    padding:18px;
+}
+
+.admin-sidebar h3{
+    margin:10px 8px 20px;
+}
+
+.admin-nav{
+    display:grid;
+    gap:6px;
+}
+
+.admin-nav button{
+    border:0;
+    background:transparent;
+    color:#cdd8ea;
+    text-align:left;
+    padding:11px 12px;
+    border-radius:9px;
+}
+
+.admin-nav button:hover,
+.admin-nav button.active{
+    background:#174d9d;
+    color:#fff;
+}
+
+.admin-content{
+    padding:25px;
+    overflow:auto;
+}
+
+.admin-panel{
+    display:none;
+}
+
+.admin-panel.active{
+    display:block;
+}
+
+.admin-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.admin-stat{
+    background:var(--bg);
+    border:1px solid var(--border);
+    padding:20px;
+    border-radius:15px;
+}
+
+.admin-stat strong{
+    display:block;
+    font-size:28px;
+}
+
+.table-wrap{
+    overflow:auto;
+    border:1px solid var(--border);
+    border-radius:14px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
+}
+
+th,
+td{
+    padding:12px;
+    border-bottom:1px solid var(--border);
+    text-align:left;
+    font-size:13px;
+}
+
+th{
+    background:var(--bg);
+}
+
+.table-actions{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+}
+
+.small-btn{
+    padding:7px 10px;
+    border:0;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.admin-form{
+    background:var(--bg);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+/* TOAST */
+
+.toast{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#111827;
+    color:#fff;
+    padding:14px 18px;
+    border-radius:11px;
+    z-index:9000;
+    transform:translateY(100px);
+    opacity:0;
+    transition:.3s;
+}
+
+.toast.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* BACK TO TOP */
+
+.back-top{
+    position:fixed;
+    right:20px;
+    bottom:75px;
+    width:45px;
+    height:45px;
+    border:0;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:none;
+    z-index:900;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:var(--card);
+        padding:15px;
+        box-shadow:0 15px 30px rgba(0,0,0,.1);
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:13px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .quick-grid,
+    .grid-4,
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:750px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .topbar-info span:nth-child(2){
+        display:none;
+    }
+
+    .brand-text h1{
+        font-size:14px;
+    }
+
+    .brand-text span{
+        font-size:9px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .about-grid,
+    .contact-grid,
+    .grid-3{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-grid,
+    .grid-4,
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .admin-layout{
+        grid-template-columns:1fr;
+    }
+
+    .admin-sidebar{
+        padding:10px;
+    }
+
+    .admin-nav{
+        display:flex;
+        overflow:auto;
+    }
+
+    .admin-nav button{
+        white-space:nowrap;
+    }
+
+    .admin-cards{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .quick-grid,
+    .grid-4,
+    .stats-grid,
+    .admin-cards,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-buttons,
+    .result-search{
+        flex-direction:column;
+    }
+
+    .form-card,
+    .about-box,
+    .contact-card{
+        padding:20px;
+    }
+}
+
+/* ===== ADMIN BRANDING / PRINCIPAL / HERO IMAGE ===== */
+.principal-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin-top:30px;padding:28px;border:1px solid var(--border);border-radius:20px;background:var(--card);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.principal-photo{width:180px;height:180px;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,var(--primary),var(--primary2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px;font-weight:900}
+.principal-photo img{width:100%;height:100%;object-fit:cover}
+.principal-meta small{color:var(--primary2);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.principal-meta h3{font-size:28px;margin:6px 0 10px}
+.upload-preview{width:100%;max-width:180px;height:120px;border:2px dashed var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg);margin-top:8px;color:var(--muted);font-size:13px;text-align:center}
+.upload-preview img{width:100%;height:100%;object-fit:cover}
+.settings-note{font-size:12px;color:var(--muted);margin-top:6px}
+@media(max-width:650px){.principal-card{grid-template-columns:1fr;text-align:center}.principal-photo{margin:auto}}
+
+
+/* ===== PROFESSIONAL CRUD / RECORD MANAGEMENT UPGRADE ===== */
+.crud-toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:14px 0 18px}
+.crud-search{flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--text);outline:none}
+.crud-search:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+.crud-actions{display:flex;gap:8px;flex-wrap:wrap}
+.crud-btn{border:0;border-radius:9px;padding:9px 12px;font-weight:700;cursor:pointer}
+.crud-edit{background:#f59e0b;color:#fff}.crud-view{background:#0ea5e9;color:#fff}.crud-print{background:#16a34a;color:#fff}.crud-danger{background:#dc2626;color:#fff}
+.crud-cancel{display:none;background:#64748b;color:#fff;border:0;border-radius:9px;padding:10px 14px;font-weight:700;cursor:pointer}
+.crud-editing{display:block;margin:10px 0;padding:11px 14px;border-radius:10px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-weight:700}
+.dark .crud-editing{background:#431407;border-color:#7c2d12;color:#fed7aa}
+.crud-empty{padding:22px;text-align:center;color:var(--muted)}
+@media(max-width:650px){.crud-toolbar{align-items:stretch}.crud-search{width:100%;min-width:0}.crud-actions{width:100%}.crud-actions button{flex:1}.crud-btn{font-size:12px;padding:8px 9px}}
+
+</style>
+
+<!-- ONLINE DATABASE: Supabase JS v2 -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="author" content="THE STANDARD SCHOOL AND COLLEGE">
+<meta name="keywords" content="The Standard School and College, school in Pakistan, admissions, education, students, teachers">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <div class="topbar-info">
+            <span id="topPhone">Phone: —</span>
+            <span id="topEmail">Email: —</span>
+            <span id="topAddress">Location: —</span>
+        </div>
+
+        <div class="top-actions">
+            <button class="top-btn" onclick="toggleDarkMode()">◐</button>
+            <button class="top-btn" onclick="openLogin()">Admin</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+<div class="container navbar">
+
+    <a href="#home" class="brand">
+
+        <div class="logo" id="headerLogo">
+            SS
+        </div>
+
+        <div class="brand-text">
+            <h1 id="schoolNameHeader">THE STANDARD SCHOOL AND COLLEGE</h1>
+            <span id="schoolTaglineHeader">QUALITY EDUCATION • STRONG VALUES • BRIGHT FUTURE</span>
+        </div>
+
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#courses">Courses</a>
+        <a href="#admission">Admissions</a>
+        <a href="#results">Results</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#admission" class="nav-apply">Apply Now</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            🎓 THE STANDARD SCHOOL AND COLLEGE
+        </span>
+
+        <h2>
+            Education That Builds
+            <span>Tomorrow</span>
+        </h2>
+
+        <p id="heroText">
+            Welcome to our school website. Official school information,
+            admissions, academics and student services will appear here.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#admission" class="btn btn-primary" id="heroPrimaryButton">
+                Apply for Admission →
+            </a>
+
+            <a href="#about" class="btn btn-light">
+                Explore School
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- QUICK FEATURES -->
+
+<div class="container">
+
+<div class="quick-grid">
+
+    <div class="quick-card">
+        <div class="quick-icon">🎓</div>
+        <h3>Admissions</h3>
+        <p>Submit an online admission application.</p>
+    </div>
+
+    <div class="quick-card">
+        <div class="quick-icon">📚</div>
+        <h3>Academics</h3>
+        <p>Explore classes and academic programs.</p>
+    </div>
+
+    <div class="quick-card">
+        <div class="quick-icon">📊</div>
+        <h3>Results</h3>
+        <p>Search student results and DMC.</p>
+    </div>
+
+    <div class="quick-card">
+        <div class="quick-icon">📞</div>
+        <h3>Contact</h3>
+        <p>Get official school contact information.</p>
+    </div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-head">
+    <small>About Us</small>
+    <h2>Welcome to Our School</h2>
+    <p>
+        Official information about THE STANDARD SCHOOL AND COLLEGE.
+    </p>
+</div>
+
+<div class="about-grid">
+
+    <div class="about-box">
+
+        <h3>Our School</h3>
+
+        <p id="aboutText">
+            School information has not yet been entered by the administrator.
+            Please check back after the official school profile is configured.
+        </p>
+
+        <div class="info-list">
+
+            <div class="info-item">
+                <div>🎯</div>
+                <div>
+                    <strong>Mission</strong>
+                    <span id="missionText">
+                        Official mission statement will be displayed here.
+                    </span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div>👁️</div>
+                <div>
+                    <strong>Vision</strong>
+                    <span id="visionText">
+                        Official vision statement will be displayed here.
+                    </span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div>⭐</div>
+                <div>
+                    <strong>Values</strong>
+                    <span id="valuesText">
+                        Official school values will be displayed here.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="about-box">
+
+        <h3>Why Choose Us?</h3>
+
+        <p>
+            Our website provides parents and students with a central place
+            for official school information.
+        </p>
+
+        <div class="info-list">
+
+            <div class="info-item">
+                <div>✓</div>
+                <div>
+                    <strong>Academic Information</strong>
+                    <span>Classes and courses can be managed from Admin.</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div>✓</div>
+                <div>
+                    <strong>Online Admissions</strong>
+                    <span>Parents can submit applications online.</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div>✓</div>
+                <div>
+                    <strong>Digital Results</strong>
+                    <span>Students can search their official results.</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div>✓</div>
+                <div>
+                    <strong>Official Updates</strong>
+                    <span>Announcements are controlled by administration.</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+    <div class="stat">
+        <div class="stat-number" id="statStudents">0</div>
+        <div class="stat-label">Students</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-number" id="statTeachers">0</div>
+        <div class="stat-label">Teachers</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-number" id="statCourses">0</div>
+        <div class="stat-label">Courses</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-number" id="statAnnouncements">0</div>
+        <div class="stat-label">Announcements</div>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRINCIPAL -->
+<section id="principalSection">
+<div class="container">
+<div class="section-head">
+    <small>School Leadership</small>
+    <h2>Principal's Message</h2>
+</div>
+<div class="principal-card">
+    <div class="principal-photo" id="principalPhotoDisplay">P</div>
+    <div class="principal-meta">
+        <small>Principal</small>
+        <h3 id="principalNameDisplay">School Principal</h3>
+        <p id="principalMessageDisplay">The principal's official message will be displayed here after it is entered by the administrator.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- ACADEMICS -->
+
+<section id="academics">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Academics</small>
+    <h2>Classes & Academic Levels</h2>
+    <p>
+        Our class structure is ready. Official academic details can be
+        configured by the administrator.
+    </p>
+</div>
+
+<div class="grid-4" id="classesGrid"></div>
+
+</div>
+
+</section>
+
+<!-- FACULTY -->
+
+<section id="faculty">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Our Team</small>
+    <h2>Faculty & Teachers</h2>
+    <p>
+        Only officially added faculty members will appear here.
+    </p>
+</div>
+
+<div class="grid-4" id="facultyGrid"></div>
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Programs</small>
+    <h2>Courses</h2>
+    <p>
+        Courses will appear here after they are added by the administrator.
+    </p>
+</div>
+
+<div class="grid-3" id="coursesGrid"></div>
+
+</div>
+
+</section>
+
+<!-- FACILITIES -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+    <small>Campus</small>
+    <h2>Facilities</h2>
+    <p>
+        Official facilities can be configured from the Admin Panel.
+    </p>
+</div>
+
+<div class="grid-4">
+
+    <div class="card facility">
+        <div class="facility-icon">🏫</div>
+        <h3>Classrooms</h3>
+        <p>
+            Official classroom information will be added by administration.
+        </p>
+    </div>
+
+    <div class="card facility">
+        <div class="facility-icon">🔬</div>
+        <h3>Laboratories</h3>
+        <p>
+            Official laboratory information can be displayed here.
+        </p>
+    </div>
+
+    <div class="card facility">
+        <div class="facility-icon">📖</div>
+        <h3>Library</h3>
+        <p>
+            Official library information can be configured.
+        </p>
+    </div>
+
+    <div class="card facility">
+        <div class="facility-icon">⚽</div>
+        <h3>Sports</h3>
+        <p>
+            Official sports and activities information can be added.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ANNOUNCEMENTS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+    <small>Notice Board</small>
+    <h2>Announcements & Events</h2>
+    <p>
+        Official notices published by the school administration.
+    </p>
+</div>
+
+<div class="grid-3" id="announcementsGrid"></div>
+
+</div>
+
+</section>
+
+<!-- ADMISSION -->
+
+<section class="admission-section" id="admission">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Admissions</small>
+    <h2>Online Admission Application</h2>
+    <p>
+        Submit your application. The information will be stored in the
+        school's browser database.
+    </p>
+</div>
+
+<div class="form-card">
+
+<form id="admissionForm">
+
+<div class="form-grid">
+
+    <div class="form-group">
+        <label>Student Full Name *</label>
+        <input id="admStudentName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Father / Guardian Name *</label>
+        <input id="admFatherName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" id="admDob">
+    </div>
+
+    <div class="form-group">
+        <label>Gender</label>
+        <select id="admGender">
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Class Applying For *</label>
+        <select id="admClass" required></select>
+    </div>
+
+    <div class="form-group">
+        <label>Contact Number *</label>
+        <input id="admPhone" required>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="admEmail">
+    </div>
+
+    <div class="form-group">
+        <label>Previous School</label>
+        <input id="admPreviousSchool">
+    </div>
+
+    <div class="form-group full">
+        <label>Address</label>
+        <textarea id="admAddress"></textarea>
+    </div>
+
+    <div class="form-group full">
+        <button class="btn btn-primary" type="submit">
+            Submit Admission Application
+        </button>
+    </div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESULTS -->
+
+<section id="results">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Student Services</small>
+    <h2>Result / DMC Search</h2>
+    <p>
+        Enter the official roll number to search a result.
+    </p>
+</div>
+
+<div class="result-box">
+
+    <div class="result-search">
+
+        <input
+            id="resultRoll"
+            placeholder="Enter Roll Number"
+        >
+
+        <button
+            class="btn btn-primary"
+            onclick="searchResult()"
+        >
+            Search Result
+        </button>
+
+    </div>
+
+    <div class="result-display" id="resultDisplay"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Campus Life</small>
+    <h2>Photo Gallery</h2>
+    <p>
+        Only photographs uploaded by the school administrator will appear.
+    </p>
+</div>
+
+<div class="grid-3" id="galleryGrid"></div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-head">
+    <small>Contact</small>
+    <h2>Contact Our School</h2>
+    <p>
+        Official contact information configured by administration.
+    </p>
+</div>
+
+<div class="contact-grid">
+
+    <div class="contact-card">
+
+        <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+                <strong>Address</strong>
+                <p id="contactAddress">Not configured</p>
+            </div>
+        </div>
+
+        <div class="contact-row">
+            <div class="contact-icon">📞</div>
+            <div>
+                <strong>Phone</strong>
+                <p id="contactPhone">Not configured</p>
+            </div>
+        </div>
+
+        <div class="contact-row">
+            <div class="contact-icon">✉️</div>
+            <div>
+                <strong>Email</strong>
+                <p id="contactEmail">Not configured</p>
+            </div>
+        </div>
+
+        <div class="contact-row">
+            <div class="contact-icon">🕐</div>
+            <div>
+                <strong>Office Hours</strong>
+                <p id="contactHours">Not configured</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-card">
+
+        <h3>Send an Enquiry</h3>
+
+        <form id="contactForm">
+
+            <div class="form-group">
+                <label>Your Name</label>
+                <input id="contactName" required>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input id="contactUserPhone" required>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="contactMessage" required></textarea>
+            </div>
+
+            <br>
+
+            <button class="btn btn-primary">
+                Send Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+    <div>
+
+        <h3 id="footerSchoolName">
+            THE STANDARD SCHOOL AND COLLEGE
+        </h3>
+
+        <p id="footerDescription">
+            Official school website for admissions, academics,
+            results and school information.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h3>Quick Links</h3>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#admission">Admissions</a></li>
+            <li><a href="#results">Results</a></li>
+        </ul>
+
+    </div>
+
+    <div>
+
+        <h3>Students</h3>
+
+        <ul>
+            <li><a href="#results">Result Search</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+
+    </div>
+
+    <div>
+
+        <h3>Contact</h3>
+
+        <ul>
+            <li id="footerPhone">—</li>
+            <li id="footerEmail">—</li>
+            <li id="footerAddress">—</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+
+    © <span id="currentYear"></span>
+    THE STANDARD SCHOOL AND COLLEGE.
+    All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-box login-box">
+
+    <div class="modal-head">
+
+        <h3>Admin Login</h3>
+
+        <button class="close" onclick="closeModal('loginModal')">
+            ×
+        </button>
+
+    </div>
+
+    <div class="modal-body">
+
+        <div class="login-logo">
+            <div class="logo">SS</div>
+            <h3>Administration</h3>
+        </div>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label>Admin Email</label>
+                <input id="loginUsername" type="email" placeholder="admin email" required>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+
+            <br>
+
+            <button class="btn btn-primary" style="width:100%">
+                Login
+            </button>
+
+        </form>
+
+        <p style="font-size:12px;color:var(--muted);margin-top:15px;text-align:center">
+            Online mode uses the administrator account created in Supabase Auth.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ADMIN MODAL -->
+
+<div class="modal" id="adminModal">
+
+<div class="modal-box admin-modal">
+
+<div class="modal-head">
+
+    <h3>School Administration Panel</h3>
+
+    <button class="close" onclick="closeAdmin()">
+        ×
+    </button>
+
+</div>
+
+<div class="admin-layout">
+
+<!-- ADMIN SIDEBAR -->
+
+<aside class="admin-sidebar">
+
+    <h3>Administration</h3>
+
+    <div class="admin-nav">
+
+        <button class="active" onclick="showAdminPanel('dashboard',this)">
+            📊 Dashboard
+        </button>
+
+        <button onclick="showAdminPanel('admissions',this)">
+            🎓 Admissions
+        </button>
+
+        <button onclick="showAdminPanel('students',this)">
+            👨‍🎓 Students
+        </button>
+
+        <button onclick="showAdminPanel('teachers',this)">
+            👨‍🏫 Teachers
+        </button>
+
+        <button onclick="showAdminPanel('coursesAdmin',this)">
+            📚 Courses
+        </button>
+
+        <button onclick="showAdminPanel('resultsAdmin',this)">
+            📊 Results
+        </button>
+
+        <button onclick="showAdminPanel('galleryAdmin',this)">
+            🖼️ Gallery
+        </button>
+
+        <button onclick="showAdminPanel('announcementsAdmin',this)">
+            📢 Announcements
+        </button>
+
+        <button onclick="showAdminPanel('settingsAdmin',this)">
+            ⚙️ Settings
+        </button>
+
+        <button onclick="exportBackup()">
+            💾 Backup
+        </button>
+
+        <button onclick="document.getElementById('restoreFile').click()">
+            ♻️ Restore
+        </button>
+
+        <button onclick="adminLogout()">
+            🚪 Logout
+        </button>
+
+    </div>
+
+</aside>
+
+<!-- ADMIN CONTENT -->
+
+<main class="admin-content">
+
+<!-- DASHBOARD -->
+
+<div class="admin-panel active" id="panel-dashboard">
+
+    <h2>Dashboard</h2>
+
+    <p style="color:var(--muted);margin-bottom:20px">
+        Live information from this browser database.
+    </p>
+
+    <div class="admin-cards">
+
+        <div class="admin-stat">
+            <span>Students</span>
+            <strong id="adminStudents">0</strong>
+        </div>
+
+        <div class="admin-stat">
+            <span>Teachers</span>
+            <strong id="adminTeachers">0</strong>
+        </div>
+
+        <div class="admin-stat">
+            <span>Admissions</span>
+            <strong id="adminAdmissions">0</strong>
+        </div>
+
+        <div class="admin-stat">
+            <span>Results</span>
+            <strong id="adminResults">0</strong>
+        </div>
+
+    </div>
+
+    <div class="admin-form">
+
+        <h3>Website Status</h3>
+
+        <p style="color:var(--muted)">
+            No demo records are automatically created.
+            All displayed records come from administrator input
+            or actual admission submissions.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ADMISSIONS -->
+
+<div class="admin-panel" id="panel-admissions">
+
+    <h2>Admission Applications</h2>
+    <div class="crud-toolbar" data-crud="admissions">
+        <input class="crud-search" id="crudSearch_admissions" placeholder="Search admissions..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('admissions')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_admissions" class="crud-editing" style="display:none"></div>
+
+    <div class="table-wrap">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Father</th>
+                    <th>Class</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="admissionsTable"></tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<!-- STUDENTS -->
+
+<div class="admin-panel" id="panel-students">
+
+    <h2>Students</h2>
+    <div class="crud-toolbar" data-crud="students">
+        <input class="crud-search" id="crudSearch_students" placeholder="Search students..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('students')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_students" class="crud-editing" style="display:none"></div>
+
+    <div class="admin-form">
+
+        <form id="studentForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Roll Number *</label>
+                <input id="studentRoll" required>
+            </div>
+
+            <div class="form-group">
+                <label>Student Name *</label>
+                <input id="studentName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Father Name</label>
+                <input id="studentFather">
+            </div>
+
+            <div class="form-group">
+                <label>Class</label>
+                <select id="studentClass"></select>
+            </div>
+
+            <div class="form-group">
+                <label>Contact</label>
+                <input id="studentContact">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="studentGender">
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-primary">
+                    Add Student
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Father</th>
+                    <th>Class</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentsTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- TEACHERS -->
+
+<div class="admin-panel" id="panel-teachers">
+
+    <h2>Teachers</h2>
+    <div class="crud-toolbar" data-crud="teachers">
+        <input class="crud-search" id="crudSearch_teachers" placeholder="Search teachers..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('teachers')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_teachers" class="crud-editing" style="display:none"></div>
+
+    <div class="admin-form">
+
+        <form id="teacherForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Teacher Name *</label>
+                <input id="teacherName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Qualification</label>
+                <input id="teacherQualification">
+            </div>
+
+            <div class="form-group">
+                <label>Subject</label>
+                <input id="teacherSubject">
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input id="teacherPhone">
+            </div>
+
+            <div class="form-group">
+                <label>Experience</label>
+                <input id="teacherExperience">
+            </div>
+
+            <div class="form-group">
+                <label>Photo URL</label>
+                <input id="teacherPhoto" placeholder="Optional image URL">
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-primary">
+                    Add Teacher
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Qualification</th>
+                    <th>Subject</th>
+                    <th>Phone</th>
+                    <th>Experience</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="teachersTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- COURSES -->
+
+<div class="admin-panel" id="panel-coursesAdmin">
+
+    <h2>Courses</h2>
+    <div class="crud-toolbar" data-crud="courses">
+        <input class="crud-search" id="crudSearch_courses" placeholder="Search courses..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('courses')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_courses" class="crud-editing" style="display:none"></div>
+
+    <div class="admin-form">
+
+        <form id="courseForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Course Name *</label>
+                <input id="courseName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Duration</label>
+                <input id="courseDuration">
+            </div>
+
+            <div class="form-group">
+                <label>Fee</label>
+                <input id="courseFee" type="number">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <input id="courseDescription">
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-primary">
+                    Add Course
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Fee</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="coursesTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- RESULTS -->
+
+<div class="admin-panel" id="panel-resultsAdmin">
+
+    <h2>Results / DMC</h2>
+    <div class="crud-toolbar" data-crud="results">
+        <input class="crud-search" id="crudSearch_results" placeholder="Search results..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('results')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_results" class="crud-editing" style="display:none"></div>
+
+    <div class="admin-form">
+
+        <form id="resultForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Roll Number *</label>
+                <input id="resRoll" required>
+            </div>
+
+            <div class="form-group">
+                <label>Student Name *</label>
+                <input id="resName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Father Name</label>
+                <input id="resFather">
+            </div>
+
+            <div class="form-group">
+                <label>Class</label>
+                <select id="resClass"></select>
+            </div>
+
+            <div class="form-group">
+                <label>Exam</label>
+                <input id="resExam" placeholder="e.g. Annual Examination">
+            </div>
+
+            <div class="form-group">
+                <label>Total Marks</label>
+                <input id="resTotal" type="number">
+            </div>
+
+            <div class="form-group">
+                <label>Obtained Marks</label>
+                <input id="resObtained" type="number">
+            </div>
+
+            <div class="form-group">
+                <label>Grade</label>
+                <input id="resGrade">
+            </div>
+
+            <div class="form-group full">
+                <label>Remarks</label>
+                <input id="resRemarks">
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-primary">
+                    Add Result
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Roll</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Exam</th>
+                    <th>Obtained</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="resultsTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- GALLERY ADMIN -->
+
+<div class="admin-panel" id="panel-galleryAdmin">
+
+    <h2>Gallery</h2>
+    <div class="crud-toolbar" data-crud="gallery">
+        <input class="crud-search" id="crudSearch_gallery" placeholder="Search gallery..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('gallery')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_gallery" class="crud-editing" style="display:none"></div>
+
+    <div class="admin-form">
+
+        <form id="galleryForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Title *</label>
+                <input id="galleryTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label>Image URL *</label>
+                <input id="galleryUrl" required>
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-primary">
+                    Add Gallery Image
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="galleryTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- ANNOUNCEMENTS ADMIN -->
+
+<div class="admin-panel" id="panel-announcementsAdmin">
+
+    <h2>Announcements</h2>
+    <div class="crud-toolbar" data-crud="announcements">
+        <input class="crud-search" id="crudSearch_announcements" placeholder="Search announcements..." autocomplete="off">
+        <div class="crud-actions">
+            <button type="button" class="crud-btn crud-print" onclick="printAllRecords('announcements')">🖨 Print / Save PDF</button>
+        </div>
+    </div>
+    <div id="crudEditing_announcements" class="crud-editing" style="display:none"></div>
+
+    <div class="admin-form">
+
+        <form id="announcementForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Title *</label>
+                <input id="announcementTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label>Date</label>
+                <input id="announcementDate" type="date">
+            </div>
+
+            <div class="form-group full">
+                <label>Description *</label>
+                <textarea id="announcementText" required></textarea>
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-primary">
+                    Publish Announcement
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="announcementsTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- SETTINGS -->
+
+<div class="admin-panel" id="panel-settingsAdmin">
+
+    <h2>School Settings</h2>
+
+    <div class="admin-form">
+
+        <form id="settingsForm">
+
+        <div class="form-grid">
+
+            <div class="form-group full">
+                <label>School Name</label>
+                <input id="setSchoolName">
+            </div>
+
+            <div class="form-group">
+                <label>Tagline</label>
+                <input id="setTagline">
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input id="setPhone">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input id="setEmail">
+            </div>
+
+            <div class="form-group">
+                <label>Office Hours</label>
+                <input id="setHours">
+            </div>
+
+            <div class="form-group full">
+                <label>Address</label>
+                <input id="setAddress">
+            </div>
+
+            <div class="form-group full">
+                <label>About School</label>
+                <textarea id="setAbout"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Mission</label>
+                <textarea id="setMission"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Vision</label>
+                <textarea id="setVision"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Values</label>
+                <textarea id="setValues"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>School Logo</label>
+                <input id="setLogo" placeholder="Optional image URL">
+                <input type="file" id="setLogoFile" accept="image/*">
+                <div class="settings-note">Upload the official school logo. It is stored in this browser.</div>
+                <div class="upload-preview" id="logoPreview">Logo preview</div>
+            </div>
+
+            <div class="form-group">
+                <label>Principal Name</label>
+                <input id="setPrincipalName" placeholder="Enter official principal name">
+            </div>
+
+            <div class="form-group full">
+                <label>Principal Photo</label>
+                <input type="file" id="setPrincipalPhotoFile" accept="image/*">
+                <div class="settings-note">Upload the official principal photo.</div>
+                <div class="upload-preview" id="principalPreview">Principal photo preview</div>
+            </div>
+
+            <div class="form-group full">
+                <label>Principal Message</label>
+                <textarea id="setPrincipalMessage" placeholder="Enter the official principal message"></textarea>
+            </div>
+
+            <div class="form-group full">
+                <label>Home Page Background Picture</label>
+                <input type="file" id="setBackgroundFile" accept="image/*">
+                <div class="settings-note">This picture will appear behind the school name on the front/home page.</div>
+                <div class="upload-preview" id="backgroundPreview">Background preview</div>
+            </div>
+
+            <div class="form-group full">
+                <label>Hero Heading</label>
+                <input id="setHeroTitle" placeholder="Optional custom home-page heading">
+            </div>
+
+            <div class="form-group full">
+                <label>Hero Description</label>
+                <textarea id="setHeroText" placeholder="Optional custom home-page description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Hero Button Text</label>
+                <input id="setHeroButtonText" placeholder="Optional">
+            </div>
+
+            <div class="form-group">
+                <label>Hero Button Link</label>
+                <input id="setHeroButtonLink" placeholder="#admission">
+            </div>
+
+            <div class="form-group full">
+                <button class="btn btn-success">
+                    Save School Settings
+                </button>
+            </div>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <div class="admin-form">
+
+        <h3>Change Admin Password</h3>
+
+        <br>
+
+        <form id="passwordForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Current Password</label>
+                    <input type="password" id="oldPassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label>New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+
+                <div class="form-group full">
+                    <button class="btn btn-primary">
+                        Change Password
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+</div>
+
+<input
+    type="file"
+    id="restoreFile"
+    accept=".json"
+    style="display:none"
+    onchange="restoreBackup(event)"
+>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast"></div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
+</button>
+
+<script>
+
+/* =========================================================
+   DATABASE
+========================================================= */
+
+const DB = {
+
+    get(key, fallback=[]){
+
+        try{
+            const value = localStorage.getItem(key);
+            return value ? JSON.parse(value) : fallback;
+        }catch(error){
+            return fallback;
+        }
+
+    },
+
+    set(key,value){
+        localStorage.setItem(key,JSON.stringify(value));
+    }
+
+};
+
+
+/* =========================================================
+   KEYS
+========================================================= */
+
+const KEYS = {
+
+    settings:"standard_school_settings",
+
+    students:"standard_school_students",
+
+    teachers:"standard_school_teachers",
+
+    courses:"standard_school_courses",
+
+    results:"standard_school_results",
+
+    gallery:"standard_school_gallery",
+
+    announcements:"standard_school_announcements",
+
+    admissions:"standard_school_admissions",
+
+    admin:"standard_school_admin"
+
+};
+
+
+/* =========================================================
+   DEFAULT SETTINGS
+   IMPORTANT:
+   NO FAKE SCHOOL CONTACT DATA
+========================================================= */
+
+const defaultSettings = {
+
+    schoolName:"THE STANDARD SCHOOL AND COLLEGE",
+
+    tagline:"QUALITY EDUCATION • STRONG VALUES • BRIGHT FUTURE",
+
+    phone:"",
+
+    email:"",
+
+    address:"",
+
+    hours:"",
+
+    about:"",
+
+    mission:"",
+
+    vision:"",
+
+    values:"",
+
+    logo:"",
+
+    principalName:"",
+
+    principalMessage:"",
+
+    principalPhoto:"",
+
+    schoolBackground:"",
+
+    heroTitle:"",
+
+    heroText:"",
+
+    heroButtonText:"",
+
+    heroButtonLink:""
+
+};
+
+
+/* =========================================================
+   FIRST RUN
+========================================================= */
+
+function initialize(){
+
+    if(!localStorage.getItem(KEYS.settings)){
+        DB.set(KEYS.settings,defaultSettings);
+    }
+
+    /*
+      No demo records are inserted.
+      Arrays remain empty until admin/user creates records.
+    */
+
+    if(!localStorage.getItem(KEYS.students))
+        DB.set(KEYS.students,[]);
+
+    if(!localStorage.getItem(KEYS.teachers))
+        DB.set(KEYS.teachers,[]);
+
+    if(!localStorage.getItem(KEYS.courses))
+        DB.set(KEYS.courses,[]);
+
+    if(!localStorage.getItem(KEYS.results))
+        DB.set(KEYS.results,[]);
+
+    if(!localStorage.getItem(KEYS.gallery))
+        DB.set(KEYS.gallery,[]);
+
+    if(!localStorage.getItem(KEYS.announcements))
+        DB.set(KEYS.announcements,[]);
+
+    if(!localStorage.getItem(KEYS.admissions))
+        DB.set(KEYS.admissions,[]);
+
+    /*
+      Initial administrator credentials.
+      Change password immediately from Settings.
+    */
+
+    if(!localStorage.getItem(KEYS.admin)){
+
+        DB.set(KEYS.admin,{
+            username:"admin",
+            password:"admin123"
+        });
+
+    }
+
+}
+
+
+/* =========================================================
+   CLASSES
+========================================================= */
+
+const classes = [
+
+    "Playgroup",
+    "Nursery",
+    "KG",
+    "Class 1",
+    "Class 2",
+    "Class 3",
+    "Class 4",
+    "Class 5",
+    "Class 6",
+    "Class 7",
+    "Class 8",
+    "Class 9",
+    "Class 10"
+
+];
+
+
+/* =========================================================
+   RENDER CLASSES
+========================================================= */
+
+function renderClasses(){
+
+    const grid = document.getElementById("classesGrid");
+
+    grid.innerHTML = classes.map((item,index)=>`
+
+        <div class="card class-card">
+
+            <div class="class-icon">
+                ${index < 3 ? "🧒" : "🎓"}
+            </div>
+
+            <h3>${escapeHtml(item)}</h3>
+
+            <p>
+                Official academic information for
+                ${escapeHtml(item)} will be managed by the school.
+            </p>
+
+        </div>
+
+    `).join("");
+
+    const selects = [
+        document.getElementById("admClass"),
+        document.getElementById("studentClass"),
+        document.getElementById("resClass")
+    ];
+
+    selects.forEach(select=>{
+
+        if(!select) return;
+
+        select.innerHTML =
+            `<option value="">Select Class</option>` +
+            classes.map(c=>`
+                <option value="${escapeHtml(c)}">
+                    ${escapeHtml(c)}
+                </option>
+            `).join("");
+
+    });
+
+}
+
+
+/* =========================================================
+   IMAGE UPLOAD HELPERS
+========================================================= */
+
+const pendingImages = {logo:null,principal:null,background:null};
+
+function getPendingImageValue(type){
+    return pendingImages[type] || "";
+}
+
+function setPreview(id,src,label){
+    const el=document.getElementById(id);
+    if(!el) return;
+    el.innerHTML = src ? `<img src="${src}" alt="${label}">` : label;
+}
+
+function readImageFile(file,type,previewId){
+    if(!file) return;
+    if(!file.type.startsWith("image/")){ showToast("Please select an image file."); return; }
+    if(file.size > 4 * 1024 * 1024){ showToast("Please choose an image smaller than 4 MB."); return; }
+    const reader=new FileReader();
+    reader.onload=function(){
+        pendingImages[type]=reader.result;
+        setPreview(previewId,reader.result,type+" preview");
+    };
+    reader.readAsDataURL(file);
+}
+
+[
+    ["setLogoFile","logo","logoPreview"],
+    ["setPrincipalPhotoFile","principal","principalPreview"],
+    ["setBackgroundFile","background","backgroundPreview"]
+].forEach(([id,type,preview])=>{
+    const input=document.getElementById(id);
+    if(input) input.addEventListener("change",()=>readImageFile(input.files[0],type,preview));
+});
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+function getSettings(){
+
+    return {
+        ...defaultSettings,
+        ...DB.get(KEYS.settings,defaultSettings)
+    };
+
+}
+
+
+function renderSettings(){
+
+    const s = getSettings();
+
+    document.title = s.schoolName || "THE STANDARD SCHOOL AND COLLEGE";
+
+    const hero = document.getElementById("home");
+    if(hero){
+        if(s.schoolBackground){
+            hero.style.backgroundImage = `linear-gradient(120deg,rgba(4,24,62,.82),rgba(11,61,145,.68)),url("${s.schoolBackground}")`;
+            hero.style.backgroundSize = "cover";
+            hero.style.backgroundPosition = "center";
+        }else{
+            hero.style.backgroundImage = "linear-gradient(120deg,rgba(4,24,62,.96),rgba(11,61,145,.82)),radial-gradient(circle at 80% 30%,#2671df,transparent 35%)";
+        }
+    }
+
+    const heroText = document.getElementById("heroText");
+    if(heroText && s.heroText) heroText.textContent = s.heroText;
+
+    const heroTitle = document.querySelector("#home .hero h2");
+    if(heroTitle && s.heroTitle) heroTitle.textContent = s.heroTitle;
+
+    const badge = document.querySelector("#home .badge");
+    if(badge) badge.textContent = `🎓 ${s.schoolName}`;
+
+    const heroButton = document.getElementById("heroPrimaryButton");
+    if(heroButton){
+        if(s.heroButtonText) heroButton.textContent = s.heroButtonText;
+        if(s.heroButtonLink) heroButton.setAttribute("href",s.heroButtonLink);
+    }
+
+    const principalName = document.getElementById("principalNameDisplay");
+    if(principalName) principalName.textContent = s.principalName || "School Principal";
+
+    const principalMessage = document.getElementById("principalMessageDisplay");
+    if(principalMessage) principalMessage.textContent = s.principalMessage || "The principal's official message will be displayed here after it is entered by the administrator.";
+
+    const principalPhoto = document.getElementById("principalPhotoDisplay");
+    if(principalPhoto){
+        principalPhoto.innerHTML = s.principalPhoto ? `<img src="${s.principalPhoto}" alt="Principal">` : "P";
+    }
+
+    document.getElementById("schoolNameHeader").textContent =
+        s.schoolName;
+
+    document.getElementById("schoolTaglineHeader").textContent =
+        s.tagline;
+
+    document.getElementById("footerSchoolName").textContent =
+        s.schoolName;
+
+    document.getElementById("topPhone").textContent =
+        s.phone ? `Phone: ${s.phone}` : "Phone: —";
+
+    document.getElementById("topEmail").textContent =
+        s.email ? `Email: ${s.email}` : "Email: —";
+
+    document.getElementById("topAddress").textContent =
+        s.address ? `Location: ${s.address}` : "Location: —";
+
+    document.getElementById("contactPhone").textContent =
+        s.phone || "Not configured";
+
+    document.getElementById("contactEmail").textContent =
+        s.email || "Not configured";
+
+    document.getElementById("contactAddress").textContent =
+        s.address || "Not configured";
+
+    document.getElementById("contactHours").textContent =
+        s.hours || "Not configured";
+
+    document.getElementById("footerPhone").textContent =
+        s.phone || "Phone not configured";
+
+    document.getElementById("footerEmail").textContent =
+        s.email || "Email not configured";
+
+    document.getElementById("footerAddress").textContent =
+        s.address || "Address not configured";
+
+    document.getElementById("aboutText").textContent =
+        s.about ||
+        "School information has not yet been entered by the administrator.";
+
+    document.getElementById("missionText").textContent =
+        s.mission ||
+        "Official mission statement will be displayed here.";
+
+    document.getElementById("visionText").textContent =
+        s.vision ||
+        "Official vision statement will be displayed here.";
+
+    document.getElementById("valuesText").textContent =
+        s.values ||
+        "Official school values will be displayed here.";
+
+    document.getElementById("footerDescription").textContent =
+        s.about ||
+        "Official school website for admissions, academics, results and school information.";
+
+    document.getElementById("heroText").textContent =
+        s.heroText ||
+        s.about ||
+        "Welcome to our school website. Official school information, admissions, academics and student services will appear here.";
+
+    const logo = document.getElementById("headerLogo");
+
+    if(s.logo){
+
+        logo.innerHTML =
+            `<img src="${escapeAttribute(s.logo)}" alt="School Logo">`;
+
+    }else{
+
+        logo.textContent = "SS";
+
+    }
+
+}
+
+
+/* =========================================================
+   FACULTY
+========================================================= */
+
+function renderTeachers(){
+
+    const teachers = DB.get(KEYS.teachers,[]);
+
+    const grid =
+        document.getElementById("facultyGrid");
+
+    if(!teachers.length){
+
+        grid.innerHTML = emptyState(
+            "👨‍🏫",
+            "No Faculty Profiles Yet",
+            "Teacher profiles added by administration will appear here."
+        );
+
+        return;
+    }
+
+    grid.innerHTML = teachers.map(t=>`
+
+        <div class="card person-card">
+
+            <div class="person-avatar">
+
+                ${
+                    t.photo
+                    ?
+                    `<img src="${escapeAttribute(t.photo)}" alt="${escapeAttribute(t.name)}">`
+                    :
+                    "👨‍🏫"
+                }
+
+            </div>
+
+            <h3>${escapeHtml(t.name)}</h3>
+
+            <div class="role">
+                ${escapeHtml(t.subject || "Faculty Member")}
+            </div>
+
+            <p style="margin-top:8px">
+                ${escapeHtml(t.qualification || "Qualification not provided")}
+            </p>
+
+            ${
+                t.experience
+                ?
+                `<p>${escapeHtml(t.experience)}</p>`
+                :
+                ""
+            }
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   COURSES
+========================================================= */
+
+function renderCourses(){
+
+    const courses = DB.get(KEYS.courses,[]);
+
+    const grid =
+        document.getElementById("coursesGrid");
+
+    if(!courses.length){
+
+        grid.innerHTML = emptyState(
+            "📚",
+            "No Courses Added",
+            "Official courses will appear after they are added by administration."
+        );
+
+        return;
+    }
+
+    grid.innerHTML = courses.map(c=>`
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h3>${escapeHtml(c.name)}</h3>
+
+                <p>
+                    ${escapeHtml(c.description || "Official course information.")}
+                </p>
+
+                <br>
+
+                <strong>
+                    Duration:
+                    ${escapeHtml(c.duration || "Not specified")}
+                </strong>
+
+                <br>
+
+                ${
+                    c.fee
+                    ?
+                    `<strong>Fee: ${escapeHtml(String(c.fee))}</strong>`
+                    :
+                    ""
+                }
+
+            </div>
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   ANNOUNCEMENTS
+========================================================= */
+
+function renderAnnouncements(){
+
+    const data =
+        DB.get(KEYS.announcements,[]);
+
+    const grid =
+        document.getElementById("announcementsGrid");
+
+    if(!data.length){
+
+        grid.innerHTML = emptyState(
+            "📢",
+            "No Announcements",
+            "Official school notices will appear here."
+        );
+
+        return;
+    }
+
+    grid.innerHTML = data.map(a=>`
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <small style="color:var(--primary2);font-weight:700">
+                    ${escapeHtml(a.date || "")}
+                </small>
+
+                <h3 style="margin-top:8px">
+                    ${escapeHtml(a.title)}
+                </h3>
+
+                <p>
+                    ${escapeHtml(a.text)}
+                </p>
+
+            </div>
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+function renderGallery(){
+
+    const data =
+        DB.get(KEYS.gallery,[]);
+
+    const grid =
+        document.getElementById("galleryGrid");
+
+    if(!data.length){
+
+        grid.innerHTML = emptyState(
+            "🖼️",
+            "Gallery Is Empty",
+            "School photographs uploaded by administration will appear here."
+        );
+
+        return;
+    }
+
+    grid.innerHTML = data.map(g=>`
+
+        <div class="card gallery-card">
+
+            <div class="gallery-image">
+
+                <img
+                    src="${escapeAttribute(g.url)}"
+                    alt="${escapeAttribute(g.title)}"
+                    onerror="this.style.display='none';this.parentElement.innerHTML='🖼️'"
+                >
+
+            </div>
+
+            <div class="gallery-caption">
+                <strong>${escapeHtml(g.title)}</strong>
+            </div>
+
+        </div>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+function emptyState(icon,title,text){
+
+    return `
+
+        <div class="empty-state">
+
+            <div class="empty-icon">${icon}</div>
+
+            <h3>${escapeHtml(title)}</h3>
+
+            <p>${escapeHtml(text)}</p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   DASHBOARD COUNTS
+========================================================= */
+
+function updateCounts(){
+
+    const students =
+        DB.get(KEYS.students,[]);
+
+    const teachers =
+        DB.get(KEYS.teachers,[]);
+
+    const courses =
+        DB.get(KEYS.courses,[]);
+
+    const announcements =
+        DB.get(KEYS.announcements,[]);
+
+    const results =
+        DB.get(KEYS.results,[]);
+
+    const admissions =
+        DB.get(KEYS.admissions,[]);
+
+    document.getElementById("statStudents").textContent =
+        students.length;
+
+    document.getElementById("statTeachers").textContent =
+        teachers.length;
+
+    document.getElementById("statCourses").textContent =
+        courses.length;
+
+    document.getElementById("statAnnouncements").textContent =
+        announcements.length;
+
+    document.getElementById("adminStudents").textContent =
+        students.length;
+
+    document.getElementById("adminTeachers").textContent =
+        teachers.length;
+
+    document.getElementById("adminAdmissions").textContent =
+        admissions.length;
+
+    document.getElementById("adminResults").textContent =
+        results.length;
+
+}
+
+
+/* =========================================================
+   ADMISSION
+========================================================= */
+
+document.getElementById("admissionForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const admissions =
+        DB.get(KEYS.admissions,[]);
+
+    const record = {
+
+        id:Date.now(),
+
+        name:document.getElementById("admStudentName").value.trim(),
+
+        father:document.getElementById("admFatherName").value.trim(),
+
+        dob:document.getElementById("admDob").value,
+
+        gender:document.getElementById("admGender").value,
+
+        className:document.getElementById("admClass").value,
+
+        phone:document.getElementById("admPhone").value.trim(),
+
+        email:document.getElementById("admEmail").value.trim(),
+
+        previousSchool:
+            document.getElementById("admPreviousSchool").value.trim(),
+
+        address:
+            document.getElementById("admAddress").value.trim(),
+
+        date:new Date().toLocaleDateString()
+
+    };
+
+    admissions.push(record);
+
+    DB.set(KEYS.admissions,admissions);
+
+    this.reset();
+
+    showToast("Admission application submitted successfully.");
+
+    updateCounts();
+
+});
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+document.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    showToast(
+        "Your enquiry has been recorded in this browser."
+    );
+
+    this.reset();
+
+});
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+function openLogin(){
+
+    document
+        .getElementById("loginModal")
+        .classList.add("active");
+
+}
+
+
+function closeModal(id){
+
+    document
+        .getElementById(id)
+        .classList.remove("active");
+
+}
+
+
+document.getElementById("loginForm")
+.addEventListener("submit",async function(e){
+    e.preventDefault();
+    const username=document.getElementById("loginUsername").value.trim();
+    const password=document.getElementById("loginPassword").value;
+    if(window.__ONLINE_DB_READY && window.__supabaseClient){
+        const {error}=await window.__supabaseClient.auth.signInWithPassword({email:username,password});
+        if(error){showToast(error.message||"Invalid admin email or password.");return;}
+        closeModal("loginModal");
+        document.getElementById("adminModal").classList.add("active");
+        loadAdminData(); this.reset(); return;
+    }
+    const admin=DB.get(KEYS.admin,{username:"admin",password:"admin123"});
+    if(username===admin.username && password===admin.password){
+        closeModal("loginModal"); document.getElementById("adminModal").classList.add("active"); loadAdminData(); this.reset();
+    }else showToast("Invalid admin email or password.");
+});
+
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+function closeAdmin(){
+
+    document
+        .getElementById("adminModal")
+        .classList.remove("active");
+
+}
+
+
+function adminLogout(){
+
+    closeAdmin();
+
+    showToast("Admin logged out.");
+
+}
+
+
+function showAdminPanel(name,button){
+
+    document
+        .querySelectorAll(".admin-panel")
+        .forEach(p=>p.classList.remove("active"));
+
+    const panel =
+        document.getElementById("panel-"+name);
+
+    if(panel){
+        panel.classList.add("active");
+    }
+
+    document
+        .querySelectorAll(".admin-nav button")
+        .forEach(b=>b.classList.remove("active"));
+
+    if(button){
+        button.classList.add("active");
+    }
+
+}
+
+
+/* =========================================================
+   STUDENT FORM
+========================================================= */
+
+document.getElementById("studentForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const students =
+        DB.get(KEYS.students,[]);
+
+    const roll =
+        document.getElementById("studentRoll").value.trim();
+
+    if(
+        students.some(s=>s.roll===roll)
+    ){
+
+        showToast("Roll number already exists.");
+
+        return;
+    }
+
+    students.push({
+
+        id:Date.now(),
+
+        roll,
+
+        name:
+            document.getElementById("studentName").value.trim(),
+
+        father:
+            document.getElementById("studentFather").value.trim(),
+
+        className:
+            document.getElementById("studentClass").value,
+
+        contact:
+            document.getElementById("studentContact").value.trim(),
+
+        gender:
+            document.getElementById("studentGender").value
+
+    });
+
+    DB.set(KEYS.students,students);
+
+    this.reset();
+
+    renderStudentsTable();
+
+    updateCounts();
+
+    showToast("Student added.");
+
+});
+
+
+/* =========================================================
+   STUDENTS TABLE
+========================================================= */
+
+function renderStudentsTable(){
+
+    const data =
+        DB.get(KEYS.students,[]);
+
+    const tbody =
+        document.getElementById("studentsTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6" style="text-align:center;color:var(--muted)">
+                    No students added yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(s=>`
+
+        <tr>
+
+            <td>${escapeHtml(s.roll)}</td>
+
+            <td>${escapeHtml(s.name)}</td>
+
+            <td>${escapeHtml(s.father || "")}</td>
+
+            <td>${escapeHtml(s.className || "")}</td>
+
+            <td>${escapeHtml(s.contact || "")}</td>
+
+            <td>
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteStudent(${s.id})"
+                >
+                    Delete
+                </button>
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteStudent(id){
+
+    if(!confirm("Delete this student?")) return;
+
+    let data =
+        DB.get(KEYS.students,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.students,data);
+
+    renderStudentsTable();
+
+    updateCounts();
+
+    showToast("Student deleted.");
+
+}
+
+
+/* =========================================================
+   TEACHER FORM
+========================================================= */
+
+document.getElementById("teacherForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const data =
+        DB.get(KEYS.teachers,[]);
+
+    data.push({
+
+        id:Date.now(),
+
+        name:
+            document.getElementById("teacherName").value.trim(),
+
+        qualification:
+            document.getElementById("teacherQualification").value.trim(),
+
+        subject:
+            document.getElementById("teacherSubject").value.trim(),
+
+        phone:
+            document.getElementById("teacherPhone").value.trim(),
+
+        experience:
+            document.getElementById("teacherExperience").value.trim(),
+
+        photo:
+            document.getElementById("teacherPhoto").value.trim()
+
+    });
+
+    DB.set(KEYS.teachers,data);
+
+    this.reset();
+
+    renderTeachers();
+
+    renderTeachersTable();
+
+    updateCounts();
+
+    showToast("Teacher added.");
+
+});
+
+
+/* =========================================================
+   TEACHERS TABLE
+========================================================= */
+
+function renderTeachersTable(){
+
+    const data =
+        DB.get(KEYS.teachers,[]);
+
+    const tbody =
+        document.getElementById("teachersTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6" style="text-align:center;color:var(--muted)">
+                    No teachers added yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(t=>`
+
+        <tr>
+
+            <td>${escapeHtml(t.name)}</td>
+
+            <td>${escapeHtml(t.qualification || "")}</td>
+
+            <td>${escapeHtml(t.subject || "")}</td>
+
+            <td>${escapeHtml(t.phone || "")}</td>
+
+            <td>${escapeHtml(t.experience || "")}</td>
+
+            <td>
+
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteTeacher(${t.id})"
+                >
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteTeacher(id){
+
+    if(!confirm("Delete this teacher?")) return;
+
+    let data =
+        DB.get(KEYS.teachers,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.teachers,data);
+
+    renderTeachersTable();
+
+    renderTeachers();
+
+    updateCounts();
+
+    showToast("Teacher deleted.");
+
+}
+
+
+/* =========================================================
+   COURSE FORM
+========================================================= */
+
+document.getElementById("courseForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const data =
+        DB.get(KEYS.courses,[]);
+
+    data.push({
+
+        id:Date.now(),
+
+        name:
+            document.getElementById("courseName").value.trim(),
+
+        duration:
+            document.getElementById("courseDuration").value.trim(),
+
+        fee:
+            document.getElementById("courseFee").value,
+
+        description:
+            document.getElementById("courseDescription").value.trim()
+
+    });
+
+    DB.set(KEYS.courses,data);
+
+    this.reset();
+
+    renderCourses();
+
+    renderCoursesTable();
+
+    updateCounts();
+
+    showToast("Course added.");
+
+});
+
+
+/* =========================================================
+   COURSES TABLE
+========================================================= */
+
+function renderCoursesTable(){
+
+    const data =
+        DB.get(KEYS.courses,[]);
+
+    const tbody =
+        document.getElementById("coursesTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="5" style="text-align:center;color:var(--muted)">
+                    No courses added yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(c=>`
+
+        <tr>
+
+            <td>${escapeHtml(c.name)}</td>
+
+            <td>${escapeHtml(c.duration || "")}</td>
+
+            <td>${escapeHtml(String(c.fee || ""))}</td>
+
+            <td>${escapeHtml(c.description || "")}</td>
+
+            <td>
+
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteCourse(${c.id})"
+                >
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteCourse(id){
+
+    if(!confirm("Delete this course?")) return;
+
+    let data =
+        DB.get(KEYS.courses,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.courses,data);
+
+    renderCoursesTable();
+
+    renderCourses();
+
+    updateCounts();
+
+    showToast("Course deleted.");
+
+}
+
+
+/* =========================================================
+   RESULT FORM
+========================================================= */
+
+document.getElementById("resultForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const data =
+        DB.get(KEYS.results,[]);
+
+    const roll =
+        document.getElementById("resRoll").value.trim();
+
+    data.push({
+
+        id:Date.now(),
+
+        roll,
+
+        name:
+            document.getElementById("resName").value.trim(),
+
+        father:
+            document.getElementById("resFather").value.trim(),
+
+        className:
+            document.getElementById("resClass").value,
+
+        exam:
+            document.getElementById("resExam").value.trim(),
+
+        total:
+            document.getElementById("resTotal").value,
+
+        obtained:
+            document.getElementById("resObtained").value,
+
+        grade:
+            document.getElementById("resGrade").value.trim(),
+
+        remarks:
+            document.getElementById("resRemarks").value.trim()
+
+    });
+
+    DB.set(KEYS.results,data);
+
+    this.reset();
+
+    renderResultsTable();
+
+    updateCounts();
+
+    showToast("Result added.");
+
+});
+
+
+/* =========================================================
+   RESULTS TABLE
+========================================================= */
+
+function renderResultsTable(){
+
+    const data =
+        DB.get(KEYS.results,[]);
+
+    const tbody =
+        document.getElementById("resultsTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="7" style="text-align:center;color:var(--muted)">
+                    No results added yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(r=>`
+
+        <tr>
+
+            <td>${escapeHtml(r.roll)}</td>
+
+            <td>${escapeHtml(r.name)}</td>
+
+            <td>${escapeHtml(r.className || "")}</td>
+
+            <td>${escapeHtml(r.exam || "")}</td>
+
+            <td>${escapeHtml(String(r.obtained || ""))}</td>
+
+            <td>${escapeHtml(String(r.total || ""))}</td>
+
+            <td>
+
+                <button
+                    class="small-btn btn-primary"
+                    onclick="printResult(${r.id})"
+                >
+                    Print
+                </button>
+
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteResult(${r.id})"
+                >
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteResult(id){
+
+    if(!confirm("Delete this result?")) return;
+
+    let data =
+        DB.get(KEYS.results,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.results,data);
+
+    renderResultsTable();
+
+    updateCounts();
+
+    showToast("Result deleted.");
+
+}
+
+
+/* =========================================================
+   PUBLIC RESULT SEARCH
+========================================================= */
+
+function searchResult(){
+
+    const roll =
+        document.getElementById("resultRoll")
+        .value
+        .trim();
+
+    const display =
+        document.getElementById("resultDisplay");
+
+    if(!roll){
+
+        display.innerHTML = emptyState(
+            "🔎",
+            "Enter Roll Number",
+            "Please enter an official roll number."
+        );
+
+        return;
+    }
+
+    const data =
+        DB.get(KEYS.results,[]);
+
+    const result =
+        data.find(x=>x.roll===roll);
+
+    if(!result){
+
+        display.innerHTML = emptyState(
+            "📄",
+            "Result Not Found",
+            "No official result is available for this roll number."
+        );
+
+        return;
+    }
+
+    display.innerHTML = `
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <div style="text-align:center">
+
+                    <h2>${escapeHtml(getSettings().schoolName)}</h2>
+
+                    <p>Official Result / DMC</p>
+
+                    <hr style="margin:20px 0;border:0;border-top:1px solid var(--border)">
+
+                </div>
+
+                <div class="grid-3">
+
+                    <div>
+                        <strong>Student</strong>
+                        <p>${escapeHtml(result.name)}</p>
+                    </div>
+
+                    <div>
+                        <strong>Roll Number</strong>
+                        <p>${escapeHtml(result.roll)}</p>
+                    </div>
+
+                    <div>
+                        <strong>Class</strong>
+                        <p>${escapeHtml(result.className || "")}</p>
+                    </div>
+
+                    <div>
+                        <strong>Father</strong>
+                        <p>${escapeHtml(result.father || "")}</p>
+                    </div>
+
+                    <div>
+                        <strong>Exam</strong>
+                        <p>${escapeHtml(result.exam || "")}</p>
+                    </div>
+
+                    <div>
+                        <strong>Grade</strong>
+                        <p>${escapeHtml(result.grade || "")}</p>
+                    </div>
+
+                    <div>
+                        <strong>Obtained Marks</strong>
+                        <p>${escapeHtml(String(result.obtained || ""))}</p>
+                    </div>
+
+                    <div>
+                        <strong>Total Marks</strong>
+                        <p>${escapeHtml(String(result.total || ""))}</p>
+                    </div>
+
+                    <div>
+                        <strong>Remarks</strong>
+                        <p>${escapeHtml(result.remarks || "")}</p>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="printResult(${result.id})"
+                >
+                    🖨️ Print DMC
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   PRINT RESULT
+========================================================= */
+
+function printResult(id){
+
+    const data =
+        DB.get(KEYS.results,[]);
+
+    const r =
+        data.find(x=>x.id===id);
+
+    if(!r) return;
+
+    const s = getSettings();
+
+    const win =
+        window.open("","_blank","width=900,height=700");
+
+    win.document.write(`
+
+        <!DOCTYPE html>
+
+        <html>
+
+        <head>
+
+            <title>Result - ${escapeHtml(r.roll)}</title>
+
+            <style>
+
+                body{
+                    font-family:Arial,sans-serif;
+                    padding:40px;
+                    color:#111;
+                }
+
+                .header{
+                    text-align:center;
+                    border-bottom:3px solid #0b3d91;
+                    padding-bottom:20px;
+                    margin-bottom:25px;
+                }
+
+                table{
+                    width:100%;
+                    border-collapse:collapse;
+                    margin-top:20px;
+                }
+
+                td,th{
+                    border:1px solid #ccc;
+                    padding:12px;
+                    text-align:left;
+                }
+
+                .signatures{
+                    display:flex;
+                    justify-content:space-between;
+                    margin-top:100px;
+                }
+
+                @media print{
+                    button{display:none}
+                }
+
+            </style>
+
+        </head>
+
+        <body>
+
+            <div class="header">
+
+                <h1>${escapeHtml(s.schoolName)}</h1>
+
+                <p>${escapeHtml(s.address || "")}</p>
+
+                <h2>STUDENT DMC / RESULT</h2>
+
+            </div>
+
+            <table>
+
+                <tr>
+                    <th>Student Name</th>
+                    <td>${escapeHtml(r.name)}</td>
+                </tr>
+
+                <tr>
+                    <th>Father Name</th>
+                    <td>${escapeHtml(r.father || "")}</td>
+                </tr>
+
+                <tr>
+                    <th>Roll Number</th>
+                    <td>${escapeHtml(r.roll)}</td>
+                </tr>
+
+                <tr>
+                    <th>Class</th>
+                    <td>${escapeHtml(r.className || "")}</td>
+                </tr>
+
+                <tr>
+                    <th>Examination</th>
+                    <td>${escapeHtml(r.exam || "")}</td>
+                </tr>
+
+                <tr>
+                    <th>Total Marks</th>
+                    <td>${escapeHtml(String(r.total || ""))}</td>
+                </tr>
+
+                <tr>
+                    <th>Obtained Marks</th>
+                    <td>${escapeHtml(String(r.obtained || ""))}</td>
+                </tr>
+
+                <tr>
+                    <th>Grade</th>
+                    <td>${escapeHtml(r.grade || "")}</td>
+                </tr>
+
+                <tr>
+                    <th>Remarks</th>
+                    <td>${escapeHtml(r.remarks || "")}</td>
+                </tr>
+
+            </table>
+
+            <div class="signatures">
+
+                <div>
+                    ______________________<br>
+                    Class Teacher
+                </div>
+
+                <div>
+                    ______________________<br>
+                    Principal
+                </div>
+
+            </div>
+
+            <script>
+                window.onload=function(){
+                    window.print();
+                };
+            <\/script>
+
+        </body>
+
+        </html>
+
+    `);
+
+    win.document.close();
+
+}
+
+
+/* =========================================================
+   GALLERY FORM
+========================================================= */
+
+document.getElementById("galleryForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const data =
+        DB.get(KEYS.gallery,[]);
+
+    data.push({
+
+        id:Date.now(),
+
+        title:
+            document.getElementById("galleryTitle").value.trim(),
+
+        url:
+            document.getElementById("galleryUrl").value.trim()
+
+    });
+
+    DB.set(KEYS.gallery,data);
+
+    this.reset();
+
+    renderGallery();
+
+    renderGalleryTable();
+
+    showToast("Gallery image added.");
+
+});
+
+
+/* =========================================================
+   GALLERY TABLE
+========================================================= */
+
+function renderGalleryTable(){
+
+    const data =
+        DB.get(KEYS.gallery,[]);
+
+    const tbody =
+        document.getElementById("galleryTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="3" style="text-align:center;color:var(--muted)">
+                    No gallery images added yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(g=>`
+
+        <tr>
+
+            <td>${escapeHtml(g.title)}</td>
+
+            <td>
+                <a
+                    href="${escapeAttribute(g.url)}"
+                    target="_blank"
+                >
+                    View Image
+                </a>
+            </td>
+
+            <td>
+
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteGallery(${g.id})"
+                >
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteGallery(id){
+
+    if(!confirm("Delete this gallery item?")) return;
+
+    let data =
+        DB.get(KEYS.gallery,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.gallery,data);
+
+    renderGalleryTable();
+
+    renderGallery();
+
+    showToast("Gallery item deleted.");
+
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT FORM
+========================================================= */
+
+document.getElementById("announcementForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const data =
+        DB.get(KEYS.announcements,[]);
+
+    data.unshift({
+
+        id:Date.now(),
+
+        title:
+            document.getElementById("announcementTitle").value.trim(),
+
+        date:
+            document.getElementById("announcementDate").value,
+
+        text:
+            document.getElementById("announcementText").value.trim()
+
+    });
+
+    DB.set(KEYS.announcements,data);
+
+    this.reset();
+
+    renderAnnouncements();
+
+    renderAnnouncementsTable();
+
+    updateCounts();
+
+    showToast("Announcement published.");
+
+});
+
+
+/* =========================================================
+   ANNOUNCEMENTS TABLE
+========================================================= */
+
+function renderAnnouncementsTable(){
+
+    const data =
+        DB.get(KEYS.announcements,[]);
+
+    const tbody =
+        document.getElementById("announcementsTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="4" style="text-align:center;color:var(--muted)">
+                    No announcements added yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(a=>`
+
+        <tr>
+
+            <td>${escapeHtml(a.title)}</td>
+
+            <td>${escapeHtml(a.date || "")}</td>
+
+            <td>${escapeHtml(a.text)}</td>
+
+            <td>
+
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteAnnouncement(${a.id})"
+                >
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteAnnouncement(id){
+
+    if(!confirm("Delete this announcement?")) return;
+
+    let data =
+        DB.get(KEYS.announcements,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.announcements,data);
+
+    renderAnnouncementsTable();
+
+    renderAnnouncements();
+
+    updateCounts();
+
+    showToast("Announcement deleted.");
+
+}
+
+
+/* =========================================================
+   ADMISSIONS TABLE
+========================================================= */
+
+function renderAdmissionsTable(){
+
+    const data =
+        DB.get(KEYS.admissions,[]);
+
+    const tbody =
+        document.getElementById("admissionsTable");
+
+    if(!data.length){
+
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6" style="text-align:center;color:var(--muted)">
+                    No admission applications yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    tbody.innerHTML = data.map(a=>`
+
+        <tr>
+
+            <td>${escapeHtml(a.name)}</td>
+
+            <td>${escapeHtml(a.father)}</td>
+
+            <td>${escapeHtml(a.className)}</td>
+
+            <td>${escapeHtml(a.phone)}</td>
+
+            <td>${escapeHtml(a.date)}</td>
+
+            <td>
+
+                <button
+                    class="small-btn btn-primary"
+                    onclick="printAdmission(${a.id})"
+                >
+                    Print
+                </button>
+
+                <button
+                    class="small-btn btn-danger"
+                    onclick="deleteAdmission(${a.id})"
+                >
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+    `).join("");
+
+}
+
+
+function deleteAdmission(id){
+
+    if(!confirm("Delete this admission application?"))
+        return;
+
+    let data =
+        DB.get(KEYS.admissions,[]);
+
+    data =
+        data.filter(x=>x.id!==id);
+
+    DB.set(KEYS.admissions,data);
+
+    renderAdmissionsTable();
+
+    updateCounts();
+
+    showToast("Admission deleted.");
+
+}
+
+
+/* =========================================================
+   PRINT ADMISSION
+========================================================= */
+
+function printAdmission(id){
+
+    const data =
+        DB.get(KEYS.admissions,[]);
+
+    const a =
+        data.find(x=>x.id===id);
+
+    if(!a) return;
+
+    const s = getSettings();
+
+    const win =
+        window.open("","_blank","width=900,height=700");
+
+    win.document.write(`
+
+        <html>
+
+        <head>
+
+            <title>Admission Application</title>
+
+            <style>
+
+                body{
+                    font-family:Arial;
+                    padding:40px;
+                }
+
+                .header{
+                    text-align:center;
+                    border-bottom:2px solid #0b3d91;
+                    padding-bottom:20px;
+                }
+
+                table{
+                    width:100%;
+                    border-collapse:collapse;
+                    margin-top:30px;
+                }
+
+                td{
+                    border:1px solid #ccc;
+                    padding:12px;
+                }
+
+                .sign{
+                    margin-top:90px;
+                    display:flex;
+                    justify-content:space-between;
+                }
+
+            </style>
+
+        </head>
+
+        <body>
+
+            <div class="header">
+
+                <h1>${escapeHtml(s.schoolName)}</h1>
+
+                <p>${escapeHtml(s.address || "")}</p>
+
+                <h2>ADMISSION APPLICATION</h2>
+
+            </div>
+
+            <table>
+
+                <tr>
+                    <td><strong>Student Name</strong></td>
+                    <td>${escapeHtml(a.name)}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Father / Guardian</strong></td>
+                    <td>${escapeHtml(a.father)}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Class</strong></td>
+                    <td>${escapeHtml(a.className)}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Date of Birth</strong></td>
+                    <td>${escapeHtml(a.dob || "")}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Gender</strong></td>
+                    <td>${escapeHtml(a.gender || "")}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Phone</strong></td>
+                    <td>${escapeHtml(a.phone)}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>${escapeHtml(a.email || "")}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Previous School</strong></td>
+                    <td>${escapeHtml(a.previousSchool || "")}</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Address</strong></td>
+                    <td>${escapeHtml(a.address || "")}</td>
+                </tr>
+
+            </table>
+
+            <div class="sign">
+
+                <div>
+                    ___________________<br>
+                    Applicant / Guardian
+                </div>
+
+                <div>
+                    ___________________<br>
+                    School Office
+                </div>
+
+            </div>
+
+            <script>
+                window.onload=function(){
+                    window.print();
+                };
+            <\/script>
+
+        </body>
+
+        </html>
+
+    `);
+
+    win.document.close();
+
+}
+
+
+/* =========================================================
+   SETTINGS FORM
+========================================================= */
+
+document.getElementById("settingsForm")
+.addEventListener("submit",async function(e){
+
+    e.preventDefault();
+
+    const settings = {
+
+        schoolName:
+            document.getElementById("setSchoolName").value.trim(),
+
+        tagline:
+            document.getElementById("setTagline").value.trim(),
+
+        phone:
+            document.getElementById("setPhone").value.trim(),
+
+        email:
+            document.getElementById("setEmail").value.trim(),
+
+        address:
+            document.getElementById("setAddress").value.trim(),
+
+        hours:
+            document.getElementById("setHours").value.trim(),
+
+        about:
+            document.getElementById("setAbout").value.trim(),
+
+        mission:
+            document.getElementById("setMission").value.trim(),
+
+        vision:
+            document.getElementById("setVision").value.trim(),
+
+        values:
+            document.getElementById("setValues").value.trim(),
+
+        logo:
+            document.getElementById("setLogo").value.trim(),
+
+        principalName:
+            document.getElementById("setPrincipalName").value.trim(),
+
+        principalMessage:
+            document.getElementById("setPrincipalMessage").value.trim(),
+
+        principalPhoto:
+            getPendingImageValue("principal") || getSettings().principalPhoto || "",
+
+        schoolBackground:
+            getPendingImageValue("background") || getSettings().schoolBackground || "",
+
+        heroTitle:
+            document.getElementById("setHeroTitle").value.trim(),
+
+        heroText:
+            document.getElementById("setHeroText").value.trim(),
+
+        heroButtonText:
+            document.getElementById("setHeroButtonText").value.trim(),
+
+        heroButtonLink:
+            document.getElementById("setHeroButtonLink").value.trim()
+
+    };
+
+    const pendingLogo = getPendingImageValue("logo");
+    if(pendingLogo) settings.logo = pendingLogo;
+
+    DB.set(KEYS.settings,settings);
+
+    renderSettings();
+
+    showToast("School settings saved.");
+
+});
+
+
+/* =========================================================
+   LOAD SETTINGS INTO ADMIN
+========================================================= */
+
+function loadSettingsForm(){
+
+    const s = getSettings();
+
+    document.getElementById("setSchoolName").value =
+        s.schoolName;
+
+    document.getElementById("setTagline").value =
+        s.tagline;
+
+    document.getElementById("setPhone").value =
+        s.phone;
+
+    document.getElementById("setEmail").value =
+        s.email;
+
+    document.getElementById("setAddress").value =
+        s.address;
+
+    document.getElementById("setHours").value =
+        s.hours;
+
+    document.getElementById("setAbout").value =
+        s.about;
+
+    document.getElementById("setMission").value =
+        s.mission;
+
+    document.getElementById("setVision").value =
+        s.vision;
+
+    document.getElementById("setValues").value =
+        s.values;
+
+    document.getElementById("setLogo").value =
+        s.logo && !String(s.logo).startsWith("data:image/") ? s.logo : "";
+
+    document.getElementById("setPrincipalName").value = s.principalName || "";
+    document.getElementById("setPrincipalMessage").value = s.principalMessage || "";
+    document.getElementById("setHeroTitle").value = s.heroTitle || "";
+    document.getElementById("setHeroText").value = s.heroText || "";
+    document.getElementById("setHeroButtonText").value = s.heroButtonText || "";
+    document.getElementById("setHeroButtonLink").value = s.heroButtonLink || "";
+    setPreview("logoPreview",s.logo,"Logo preview");
+    setPreview("principalPreview",s.principalPhoto,"Principal photo preview");
+    setPreview("backgroundPreview",s.schoolBackground,"Background preview");
+
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD
+========================================================= */
+
+document.getElementById("passwordForm")
+.addEventListener("submit",async function(e){
+    e.preventDefault();
+    const oldPassword = document.getElementById("oldPassword").value;
+    const newPassword = document.getElementById("newPassword").value;
+    if(newPassword.length < 6){
+        showToast("New password must contain at least 6 characters.");
+        return;
+    }
+    if(window.__ONLINE_DB_READY && window.__supabaseClient){
+        const { data: sessionData } = await window.__supabaseClient.auth.getSession();
+        if(!sessionData.session){ showToast("Please login again."); return; }
+        const { error } = await window.__supabaseClient.auth.updateUser({password:newPassword});
+        if(error){ showToast(error.message || "Password update failed."); return; }
+        this.reset();
+        showToast("Admin password changed successfully.");
+        return;
+    }
+    const admin = DB.get(KEYS.admin,{username:"admin",password:"admin123"});
+    if(oldPassword !== admin.password){ showToast("Current password is incorrect."); return; }
+    admin.password = newPassword;
+    DB.set(KEYS.admin,admin);
+    this.reset();
+    showToast("Admin password changed.");
+});
+
+
+/* =========================================================
+   ADMIN DATA
+========================================================= */
+
+function loadAdminData(){
+
+    renderAdmissionsTable();
+
+    renderStudentsTable();
+
+    renderTeachersTable();
+
+    renderCoursesTable();
+
+    renderResultsTable();
+
+    renderGalleryTable();
+
+    renderAnnouncementsTable();
+
+    loadSettingsForm();
+
+    updateCounts();
+
+}
+
+
+/* =========================================================
+   BACKUP
+========================================================= */
+
+function exportBackup(){
+
+    const backup = {
+
+        version:1,
+
+        exportedAt:new Date().toISOString(),
+
+        settings:DB.get(KEYS.settings,defaultSettings),
+
+        students:DB.get(KEYS.students,[]),
+
+        teachers:DB.get(KEYS.teachers,[]),
+
+        courses:DB.get(KEYS.courses,[]),
+
+        results:DB.get(KEYS.results,[]),
+
+        gallery:DB.get(KEYS.gallery,[]),
+
+        announcements:DB.get(KEYS.announcements,[]),
+
+        admissions:DB.get(KEYS.admissions,[])
+
+    };
+
+    const blob =
+        new Blob(
+            [JSON.stringify(backup,null,2)],
+            {type:"application/json"}
+        );
+
+    const url =
+        URL.createObjectURL(blob);
+
+    const a =
+        document.createElement("a");
+
+    a.href = url;
+
+    a.download =
+        "standard-school-backup.json";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+    showToast("Backup created.");
+
+}
+
+
+/* =========================================================
+   RESTORE
+========================================================= */
+
+function restoreBackup(event){
+
+    const file =
+        event.target.files[0];
+
+    if(!file) return;
+
+    const reader =
+        new FileReader();
+
+    reader.onload=function(){
+
+        try{
+
+            const data =
+                JSON.parse(reader.result);
+
+            if(data.settings)
+                DB.set(KEYS.settings,data.settings);
+
+            if(Array.isArray(data.students))
+                DB.set(KEYS.students,data.students);
+
+            if(Array.isArray(data.teachers))
+                DB.set(KEYS.teachers,data.teachers);
+
+            if(Array.isArray(data.courses))
+                DB.set(KEYS.courses,data.courses);
+
+            if(Array.isArray(data.results))
+                DB.set(KEYS.results,data.results);
+
+            if(Array.isArray(data.gallery))
+                DB.set(KEYS.gallery,data.gallery);
+
+            if(Array.isArray(data.announcements))
+                DB.set(KEYS.announcements,data.announcements);
+
+            if(Array.isArray(data.admissions))
+                DB.set(KEYS.admissions,data.admissions);
+
+            renderEverything();
+
+            loadAdminData();
+
+            showToast("Backup restored successfully.");
+
+        }catch(error){
+
+            showToast("Invalid backup file.");
+
+        }
+
+        event.target.value="";
+
+    };
+
+    reader.readAsText(file);
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "standard_school_dark",
+        document.body.classList.contains("dark")
+    );
+
+}
+
+
+function loadDarkMode(){
+
+    if(
+        localStorage.getItem("standard_school_dark")==="true"
+    ){
+
+        document.body.classList.add("dark");
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu(){
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("open");
+
+}
+
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link=>{
+
+        link.addEventListener("click",()=>{
+
+            document
+                .getElementById("navLinks")
+                .classList.remove("open");
+
+        });
+
+    });
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent =
+        message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer =
+        setTimeout(
+            ()=>toast.classList.remove("show"),
+            3000
+        );
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHtml(value){
+
+    return String(value ?? "")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+function escapeAttribute(value){
+
+    return String(value ?? "")
+        .replace(/"/g,"&quot;")
+        .replace(/</g,"%3C")
+        .replace(/>/g,"%3E");
+
+}
+
+
+/* =========================================================
+   RENDER EVERYTHING
+========================================================= */
+
+function renderEverything(){
+
+    renderSettings();
+
+    renderClasses();
+
+    renderTeachers();
+
+    renderCourses();
+
+    renderAnnouncements();
+
+    renderGallery();
+
+    updateCounts();
+
+}
+
+
+/* =========================================================
+   INITIALIZATION
+========================================================= */
+
+initialize();
+
+loadDarkMode();
+
+renderEverything();
+
+document.getElementById("currentYear")
+.textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+window.addEventListener("scroll",function(){
+
+    const btn =
+        document.getElementById("backTop");
+
+    btn.style.display =
+        window.scrollY > 500
+        ? "block"
+        : "none";
+
+});
+
+
+/* =========================================================
+   CLOSE MODAL WHEN CLICK OUTSIDE
+========================================================= */
+
+document
+    .querySelectorAll(".modal")
+    .forEach(modal=>{
+
+        modal.addEventListener("click",function(e){
+
+            if(e.target===modal){
+
+                modal.classList.remove("active");
+
+            }
+
+        });
+
+    });
+
+
+
+/* =========================================================
+   PROFESSIONAL RECORD CRUD UPGRADE
+   Add -> Edit -> Update -> View -> Print/Save PDF -> Delete
+   Data is stored in localStorage through the existing DB layer.
+========================================================= */
+(function(){
+  const state={students:null,teachers:null,courses:null,results:null,gallery:null,announcements:null,admissions:null};
+  const cfg={
+    students:{key:KEYS.students,form:'studentForm',label:'Student',fields:{roll:'studentRoll',name:'studentName',father:'studentFather',className:'studentClass',contact:'studentContact',gender:'studentGender'}},
+    teachers:{key:KEYS.teachers,form:'teacherForm',label:'Teacher',fields:{name:'teacherName',qualification:'teacherQualification',subject:'teacherSubject',phone:'teacherPhone',experience:'teacherExperience',photo:'teacherPhoto'}},
+    courses:{key:KEYS.courses,form:'courseForm',label:'Course',fields:{name:'courseName',duration:'courseDuration',fee:'courseFee',description:'courseDescription'}},
+    results:{key:KEYS.results,form:'resultForm',label:'Result',fields:{roll:'resRoll',name:'resName',father:'resFather',className:'resClass',exam:'resExam',total:'resTotal',obtained:'resObtained',grade:'resGrade',remarks:'resRemarks'}},
+    gallery:{key:KEYS.gallery,form:'galleryForm',label:'Gallery item',fields:{title:'galleryTitle',url:'galleryUrl'}},
+    announcements:{key:KEYS.announcements,form:'announcementForm',label:'Announcement',fields:{title:'announcementTitle',date:'announcementDate',text:'announcementText'}},
+    admissions:{key:KEYS.admissions,form:'admissionForm',label:'Admission',fields:{name:'admStudentName',father:'admFatherName',dob:'admDob',gender:'admGender',className:'admClass',phone:'admPhone',email:'admEmail',previousSchool:'admPreviousSchool',address:'admAddress'}}
+  };
+  function get(k){return DB.get(k,[])}
+  function set(k,v){DB.set(k,v)}
+  function esc(v){return escapeHtml(v==null?'':v)}
+  function textOf(o){return Object.values(o||{}).filter(v=>v!==undefined&&v!==null).join(' ').toLowerCase()}
+  function matches(o,q){return !q||textOf(o).includes(q.toLowerCase())}
+  function editingBanner(type,msg){const el=document.getElementById('crudEditing_'+type);if(!el)return;el.textContent=msg||'';el.style.display=msg?'block':'none'}
+  function ensureCancel(type){
+    const c=cfg[type]; if(!c.form)return;
+    const f=document.getElementById(c.form); if(!f||f.querySelector('.crud-cancel'))return;
+    const b=document.createElement('button'); b.type='button'; b.className='crud-cancel'; b.textContent='Cancel Edit';
+    b.onclick=()=>cancelEdit(type); f.querySelector('.form-group.full')?.appendChild(b);
+  }
+  function startEdit(type,id){
+    const c=cfg[type]; let data=get(c.key); const rec=data.find(x=>String(x.id)===String(id)); if(!rec)return;
+    state[type]=id;
+    if(c.form){
+      ensureCancel(type); Object.entries(c.fields).forEach(([k,id2])=>{const el=document.getElementById(id2); if(el)el.value=rec[k]??''});
+      const f=document.getElementById(c.form); const btn=f.querySelector('button[type="submit"],button:not(.crud-cancel)'); if(btn)btn.textContent='Update '+c.label;
+      const cancel=f.querySelector('.crud-cancel'); if(cancel)cancel.style.display='inline-block';
+      editingBanner(type,'Editing '+c.label+': '+(rec.name||rec.title||rec.roll||'record')+' — change the fields and click Update.');
+      f.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+  }
+  window.cancelEdit=function(type){
+    const c=cfg[type]; state[type]=null; if(c.form){const f=document.getElementById(c.form);f.reset();const btn=f.querySelector('button[type="submit"],button:not(.crud-cancel)');if(btn)btn.textContent='Add '+c.label;const cancel=f.querySelector('.crud-cancel');if(cancel)cancel.style.display='none';}editingBanner(type,'');
+  };
+  function updateRecord(type){
+    const c=cfg[type], id=state[type]; if(id==null)return false; let data=get(c.key); const i=data.findIndex(x=>String(x.id)===String(id)); if(i<0){cancelEdit(type);return false;}
+    const rec={...data[i]}; Object.entries(c.fields).forEach(([k,id2])=>{const el=document.getElementById(id2); if(el)rec[k]=el.value.trim?el.value.trim():el.value});
+    if(type==='students' && data.some((x,idx)=>idx!==i && String(x.roll).toLowerCase()===String(rec.roll).toLowerCase())){showToast('Roll number already exists.');return true}
+    data[i]=rec;set(c.key,data);cancelEdit(type); refresh(type);showToast(c.label+' updated successfully.');return true;
+  }
+  function refresh(type){
+    if(type==='students'){renderStudentsTable();renderStudents?.();}
+    if(type==='teachers'){renderTeachersTable();renderTeachers?.();}
+    if(type==='courses'){renderCoursesTable();renderCourses?.();}
+    if(type==='results'){renderResultsTable();}
+    if(type==='gallery'){renderGalleryTable();renderGallery?.();}
+    if(type==='announcements'){renderAnnouncementsTable();renderAnnouncements?.();}
+    if(type==='admissions'){renderAdmissionsTable();}
+    updateCounts?.();
+  }
+  Object.keys(cfg).forEach(type=>{
+    const c=cfg[type]; if(!c.form)return;
+    const f=document.getElementById(c.form); if(!f)return;
+    ensureCancel(type);
+    f.addEventListener('submit',function(e){
+      if(state[type]!=null){e.preventDefault();e.stopImmediatePropagation();updateRecord(type);}
+    },true);
+  });
+  // Search handlers
+  Object.keys(cfg).forEach(type=>{
+    const inp=document.getElementById('crudSearch_'+type); if(!inp)return;
+    inp.addEventListener('input',()=>renderEnhancedTable(type,inp.value));
+  });
+  function actionButtons(type,id){
+    return `<button type="button" class="crud-btn crud-edit" onclick="editRecord('${type}',${JSON.stringify(id)})">✏ Edit</button>`+
+           `<button type="button" class="crud-btn crud-view" onclick="viewRecord('${type}',${JSON.stringify(id)})">👁 View</button>`+
+           `<button type="button" class="crud-btn crud-print" onclick="printRecord('${type}',${JSON.stringify(id)})">🖨 Print/PDF</button>`+
+           `<button type="button" class="crud-btn crud-danger" onclick="deleteRecordEnhanced('${type}',${JSON.stringify(id)})">🗑 Delete</button>`;
+  }
+  window.editRecord=startEdit;
+  window.deleteRecordEnhanced=function(type,id){const c=cfg[type];if(!confirm('Delete this '+c.label.toLowerCase()+'?'))return;let data=get(c.key).filter(x=>String(x.id)!==String(id));set(c.key,data);if(state[type]!=null&&String(state[type])===String(id))cancelEdit(type);refresh(type);showToast(c.label+' deleted.');};
+  window.viewRecord=function(type,id){const c=cfg[type],r=get(c.key).find(x=>String(x.id)===String(id));if(!r)return;const rows=Object.entries(r).filter(([k])=>k!=='id').map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');const w=window.open('','_blank','width=800,height=700');if(!w)return;const s=getSettings();w.document.write(`<html><head><title>${esc(c.label)} Details</title><style>body{font-family:Arial;padding:35px;color:#111}h1{text-align:center;color:#0b3d91}table{width:100%;border-collapse:collapse;margin-top:25px}th,td{border:1px solid #ccc;padding:10px;text-align:left}th{width:30%;background:#f3f4f6}.head{text-align:center;border-bottom:2px solid #0b3d91;padding-bottom:15px}</style></head><body><div class="head"><h1>${esc(s.schoolName||'THE STANDARD SCHOOL AND COLLEGE')}</h1><p>${esc(s.address||'')}</p><h2>${esc(c.label.toUpperCase())} DETAILS</h2></div><table>${rows}</table></body></html>`);w.document.close();};
+  window.printRecord=function(type,id){const c=cfg[type],r=get(c.key).find(x=>String(x.id)===String(id));if(!r)return;const s=getSettings();const rows=Object.entries(r).filter(([k])=>k!=='id').map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');const w=window.open('','_blank','width=900,height=800');if(!w)return;w.document.write(`<html><head><title>${esc(c.label)} - Print</title><style>@page{size:A4;margin:18mm}body{font-family:Arial;padding:10px;color:#111}.head{text-align:center;border-bottom:2px solid #0b3d91;padding-bottom:12px}.head h1{color:#0b3d91}table{width:100%;border-collapse:collapse;margin-top:22px}th,td{border:1px solid #aaa;padding:9px;text-align:left}th{width:35%;background:#f4f4f4}</style></head><body><div class="head"><h1>${esc(s.schoolName||'THE STANDARD SCHOOL AND COLLEGE')}</h1><p>${esc(s.address||'')}</p><h2>${esc(c.label.toUpperCase())}</h2></div><table>${rows}</table><p style="margin-top:55px;display:flex;justify-content:space-between"><span>____________________<br>Class Teacher / Office</span><span>____________________<br>Principal</span></p><script>window.onload=function(){window.print()}<\/script></body></html>`);w.document.close();};
+  window.printAllRecords=function(type){const c=cfg[type],q=document.getElementById('crudSearch_'+type)?.value.trim()||'',data=get(c.key).filter(x=>matches(x,q));const s=getSettings();if(!data.length){showToast('No records to print.');return;}const sections=data.map((r,n)=>`<div class="record"><h3>${esc(c.label)} #${n+1}</h3><table>${Object.entries(r).filter(([k])=>k!=='id').map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</table></div>`).join('');const w=window.open('','_blank','width=1000,height=850');if(!w)return;w.document.write(`<html><head><title>${esc(c.label)} List</title><style>@page{size:A4;margin:15mm}body{font-family:Arial;color:#111}.head{text-align:center;border-bottom:2px solid #0b3d91;padding-bottom:10px}.head h1{color:#0b3d91}.record{page-break-inside:avoid;margin:20px 0}.record h3{color:#0b3d91}table{width:100%;border-collapse:collapse}th,td{border:1px solid #bbb;padding:7px;text-align:left}th{width:30%;background:#f5f5f5}@media print{.record{page-break-inside:avoid}}</style></head><body><div class="head"><h1>${esc(s.schoolName||'THE STANDARD SCHOOL AND COLLEGE')}</h1><p>${esc(s.address||'')}</p><h2>${esc(c.label.toUpperCase())} LIST</h2><p>Records: ${data.length}</p></div>${sections}<script>window.onload=function(){window.print()}<\/script></body></html>`);w.document.close();};
+  function renderEnhancedTable(type,q){
+    q=q||document.getElementById('crudSearch_'+type)?.value.trim()||'';const data=get(cfg[type].key).filter(x=>matches(x,q));
+    const tbody=document.getElementById(type==='students'?'studentsTable':type==='teachers'?'teachersTable':type==='courses'?'coursesTable':type==='results'?'resultsTable':type==='gallery'?'galleryTable':type==='announcements'?'announcementsTable':'admissionsTable');if(!tbody)return;
+    if(type==='students')tbody.innerHTML=data.length?data.map(s=>`<tr><td>${esc(s.roll)}</td><td>${esc(s.name)}</td><td>${esc(s.father)}</td><td>${esc(s.className)}</td><td>${esc(s.contact)}</td><td>${actionButtons(type,s.id)}</td></tr>`).join(''):`<tr><td colspan="6" class="crud-empty">No matching students.</td></tr>`;
+    else if(type==='teachers')tbody.innerHTML=data.length?data.map(t=>`<tr><td>${esc(t.name)}</td><td>${esc(t.qualification)}</td><td>${esc(t.subject)}</td><td>${esc(t.phone)}</td><td>${esc(t.experience)}</td><td>${actionButtons(type,t.id)}</td></tr>`).join(''):`<tr><td colspan="6" class="crud-empty">No matching teachers.</td></tr>`;
+    else if(type==='courses')tbody.innerHTML=data.length?data.map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.duration)}</td><td>${esc(c.fee)}</td><td>${esc(c.description)}</td><td>${actionButtons(type,c.id)}</td></tr>`).join(''):`<tr><td colspan="5" class="crud-empty">No matching courses.</td></tr>`;
+    else if(type==='results')tbody.innerHTML=data.length?data.map(r=>`<tr><td>${esc(r.roll)}</td><td>${esc(r.name)}</td><td>${esc(r.className)}</td><td>${esc(r.exam)}</td><td>${esc(r.obtained)}</td><td>${esc(r.total)}</td><td>${actionButtons(type,r.id)}</td></tr>`).join(''):`<tr><td colspan="7" class="crud-empty">No matching results.</td></tr>`;
+    else if(type==='gallery')tbody.innerHTML=data.length?data.map(g=>`<tr><td>${esc(g.title)}</td><td><a href="${escapeAttribute(g.url)}" target="_blank">View Image</a></td><td>${actionButtons(type,g.id)}</td></tr>`).join(''):`<tr><td colspan="3" class="crud-empty">No matching gallery items.</td></tr>`;
+    else if(type==='announcements')tbody.innerHTML=data.length?data.map(a=>`<tr><td>${esc(a.title)}</td><td>${esc(a.date)}</td><td>${esc(a.text)}</td><td>${actionButtons(type,a.id)}</td></tr>`).join(''):`<tr><td colspan="4" class="crud-empty">No matching announcements.</td></tr>`;
+    else if(type==='admissions')tbody.innerHTML=data.length?data.map(a=>`<tr><td>${esc(a.name)}</td><td>${esc(a.father)}</td><td>${esc(a.className)}</td><td>${esc(a.phone)}</td><td>${esc(a.date)}</td><td><button type="button" class="crud-btn crud-edit" onclick="editRecord('admissions',${JSON.stringify(a.id)})">✏ Edit</button><button type="button" class="crud-btn crud-view" onclick="viewRecord('admissions',${JSON.stringify(a.id)})">👁 View</button><button type="button" class="crud-btn crud-print" onclick="printRecord('admissions',${JSON.stringify(a.id)})">🖨 Print/PDF</button><button type="button" class="crud-btn crud-danger" onclick="deleteRecordEnhanced('admissions',${JSON.stringify(a.id)})">🗑 Delete</button></td></tr>`).join(''):`<tr><td colspan="6" class="crud-empty">No matching admissions.</td></tr>`;
+  }
+  // Keep the enhanced CRUD tables active even when the original
+  // loadAdminData()/other refresh functions re-render the admin tables.
+  // The original table functions only showed Delete, so they could
+  // overwrite the Edit/View/Print/Delete buttons after login or refresh.
+  window.renderAdmissionsTable = ()=>renderEnhancedTable('admissions');
+  window.renderStudentsTable = ()=>renderEnhancedTable('students');
+  window.renderTeachersTable = ()=>renderEnhancedTable('teachers');
+  window.renderCoursesTable = ()=>renderEnhancedTable('courses');
+  window.renderResultsTable = ()=>renderEnhancedTable('results');
+  window.renderGalleryTable = ()=>renderEnhancedTable('gallery');
+  window.renderAnnouncementsTable = ()=>renderEnhancedTable('announcements');
+
+  // Re-render enhanced tables after the original initialization completes.
+  setTimeout(()=>Object.keys(cfg).forEach(t=>renderEnhancedTable(t)),0);
+})();
+
+
+
+/* =========================================================
+   REAL ONLINE DATABASE BRIDGE
+   Supabase + PostgreSQL + Auth + Realtime
+   Fill SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY below.
+   The existing UI remains compatible with the DB.get/DB.set API.
+========================================================= */
+(function(){
+  const SUPABASE_URL = "https://caecapkdytfmokbmymcd.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_zkq4sWEd2pHEJ_7yXqPGDQ_iRNlkxYP";
+  const configured = SUPABASE_URL.startsWith("https://") &&
+                     !SUPABASE_URL.includes("YOUR_") &&
+                     SUPABASE_PUBLISHABLE_KEY.startsWith("sb_") &&
+                     !SUPABASE_PUBLISHABLE_KEY.includes("YOUR_");
+  if(!configured || !window.supabase) {
+    window.__ONLINE_DB_READY = false;
+    return;
+  }
+  const client = window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{
+    auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}
+  });
+  window.__supabaseClient = client;
+  window.__ONLINE_DB_READY = true;
+  window.__ONLINE_DB_STATUS = "Connecting to online database...";
+
+  const originalGet = DB.get.bind(DB);
+  const originalSet = DB.set.bind(DB);
+  const entityMap = {
+    [KEYS.students]:"students",
+    [KEYS.teachers]:"teachers",
+    [KEYS.courses]:"courses",
+    [KEYS.results]:"results",
+    [KEYS.gallery]:"gallery",
+    [KEYS.announcements]:"announcements",
+    [KEYS.admissions]:"admissions"
+  };
+  const keyForEntity = Object.fromEntries(Object.entries(entityMap).map(([k,v])=>[v,k]));
+  let booting = true;
+  const syncTimers = {};
+
+  DB.set = function(key,value){
+    originalSet(key,value);
+    const entity = entityMap[key];
+    if(entity && !booting){
+      clearTimeout(syncTimers[entity]);
+      syncTimers[entity] = setTimeout(()=>syncEntity(entity),250);
+    }
+    if(key===KEYS.settings && !booting){
+      clearTimeout(syncTimers.settings);
+      syncTimers.settings=setTimeout(()=>syncSettings(value),250);
+    }
+  };
+
+  async function syncSettings(value){
+    try{
+      const payload = {
+        setting_key:"__site_json",
+        setting_value:JSON.stringify(value),
+        updated_at:new Date().toISOString()
+      };
+      const {error}=await client.from("school_settings")
+        .upsert(payload,{onConflict:"setting_key"});
+      if(error) throw error;
+    }catch(e){
+      console.warn("Settings sync failed",e);
+      window.__ONLINE_DB_STATUS = "Online database settings error";
+    }
+  }
+
+  async function syncEntity(entity){
+    const key=keyForEntity[entity];
+    if(!key) return;
+    const local=originalGet(key,[]).map(r=>({...r,id:String(r.id ?? crypto.randomUUID())}));
+    local.forEach(r=>{ if(r.id && !originalGet(key,[]).some(x=>String(x.id)===String(r.id))){} });
+    // Keep IDs stable in browser cache.
+    originalSet(key,local);
+    try{
+      const rows=local.map(r=>({id:String(r.id),entity,data:r,updated_at:new Date().toISOString()}));
+      if(rows.length){
+        const {error}=await client.from("school_records").upsert(rows,{onConflict:"id"});
+        if(error) throw error;
+      }
+      // Delete records that this browser explicitly removed. This is based on IDs returned by the server.
+      const {data:remote,error:readErr}=await client.from("school_records").select("id").eq("entity",entity);
+      if(readErr) throw readErr;
+      const ids=new Set(local.map(r=>String(r.id)));
+      const stale=(remote||[]).map(r=>String(r.id)).filter(id=>!ids.has(id));
+      if(stale.length){
+        const {error:delErr}=await client.from("school_records").delete().in("id",stale).eq("entity",entity);
+        if(delErr) throw delErr;
+      }
+    }catch(e){
+      console.warn("Online sync failed for",entity,e);
+      window.__ONLINE_DB_STATUS = "Online database error";
+    }
+  }
+
+  async function pullEntity(entity){
+    const key=keyForEntity[entity];
+    if(!key) return;
+    const {data,error}=await client.from("school_records").select("id,data").eq("entity",entity).order("updated_at",{ascending:false});
+    if(error) throw error;
+    originalSet(key,(data||[]).map(r=>({...r.data,id:r.id})));
+  }
+
+  async function pullSettings(){
+    const {data,error}=await client.from("school_settings")
+      .select("setting_value")
+      .eq("setting_key","__site_json")
+      .maybeSingle();
+    if(error) throw error;
+    if(data && data.setting_value){
+      try{
+        originalSet(KEYS.settings,JSON.parse(data.setting_value));
+      }catch(e){
+        console.warn("Invalid online settings JSON",e);
+      }
+    }
+  }
+
+  async function pushLocalIfRemoteEmpty(entity){
+    const key=keyForEntity[entity];
+    const {count,error}=await client.from("school_records").select("id",{count:"exact",head:true}).eq("entity",entity);
+    if(error) throw error;
+    const local=originalGet(key,[]);
+    if((count||0)===0 && local.length){
+      await syncEntity(entity);
+    } else {
+      await pullEntity(entity);
+    }
+  }
+
+  async function onlineBoot(){
+    try{
+      window.__ONLINE_DB_STATUS="Loading shared school data...";
+      await pullSettings();
+      for(const entity of Object.values(entityMap)) await pushLocalIfRemoteEmpty(entity);
+      booting=false;
+      renderEverything();
+      loadAdminData();
+      window.__ONLINE_DB_STATUS="Online database connected";
+      showToast("Online database connected.");
+
+      // Realtime updates: another computer adding/editing a record can appear here.
+      client.channel("school-live-updates")
+        .on("postgres_changes",{event:"*",schema:"public",table:"school_records"},async(payload)=>{
+          const entity=payload.new?.entity || payload.old?.entity;
+          if(entity && keyForEntity[entity]){
+            try{ await pullEntity(entity); renderEverything(); loadAdminData(); }catch(e){ console.warn(e); }
+          }
+        })
+        .on("postgres_changes",{event:"*",schema:"public",table:"school_settings"},async()=>{
+          try{await pullSettings();renderEverything();}catch(e){console.warn(e);}
+        })
+        .subscribe();
+    }catch(e){
+      console.error("Supabase boot failed",e);
+      booting=false;
+      window.__ONLINE_DB_STATUS="Online database setup incomplete";
+      showToast("Online database setup is incomplete. Check your Supabase URL/key and SQL setup.");
+    }
+  }
+
+  onlineBoot();
+})();
+</script>
+
+</body>
+</html>
