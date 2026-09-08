@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://afaq1406.github.io/standard-school-website/sitemap.xml
